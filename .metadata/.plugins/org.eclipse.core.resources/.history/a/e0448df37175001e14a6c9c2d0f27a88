@@ -1,0 +1,17 @@
+/*
+ * Encoder.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef SENSORS_ENCODER_H_
+#define SENSORS_ENCODER_H_
+
+class Encoder : public Sensor {
+public:
+	Encoder();
+	virtual ~Encoder();
+};
+
+#endif /* SENSORS_ENCODER_H_ */

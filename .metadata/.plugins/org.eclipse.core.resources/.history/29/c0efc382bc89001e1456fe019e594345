@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>lwIP - A Lightweight TCP/IP Stack</title>
+    <style type="text/css" id="operaUserStyle"></style>
+</head>
+<body bgcolor="green" text="black">
+
+<?php
+$conn = mysqli_connect("localhost", "tanakulgroup", "TNKGtnk@2021", "tanakulgroup");
+
+// Check connection
+if ($conn->connect_error) {
+    echo "Connection failed: " . $conn->connect_error;
+}
+
+$conn->close();
+?>
+
+</body>
+</html>

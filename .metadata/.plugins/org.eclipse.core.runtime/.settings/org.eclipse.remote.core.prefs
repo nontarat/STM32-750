@@ -1,0 +1,12 @@
+connectionTypeId=org.eclipse.remote.JSch
+connections/org.eclipse.remote.serial.core.connectionType/fd/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/fd/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/fd/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/fd/serial.portName=COM5
+connections/org.eclipse.remote.serial.core.connectionType/fd/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/nn/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/nn/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/nn/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/nn/serial.portName=COM7
+connections/org.eclipse.remote.serial.core.connectionType/nn/serial.stopBits=0
+eclipse.preferences.version=1

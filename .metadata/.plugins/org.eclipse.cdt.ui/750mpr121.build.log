@@ -1,0 +1,10 @@
+11:01:00 **** Incremental Build of configuration Debug for project 750mpr121 ****
+make -j4 all 
+arm-none-eabi-size   750mpr121.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29432	    108	   2292	  31832	   7c58	750mpr121.elf
+Finished building: default.size.stdout
+ 
+
+11:01:00 Build Finished. 0 errors, 0 warnings. (took 245ms)
+

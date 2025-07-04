@@ -1,0 +1,36 @@
+/*
+ * lowpassfilter.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+#include "time_utils.h"
+#include "foc_utils.h"
+#include "lowpassfilter.h"
+
+lowpass_filter::lowpass_filter(float time_constant)
+: Tf(time_constant)
+, y_prev(0.0f)
+{
+timestamp_prev = _micros();
+}
+
+lowpass_filter::~lowpass_filter() {
+	// TODO Auto-generated destructor stub
+    unsigned long timestamp = _micros();
+    float dt = (timestamp - timestamp_prev)*1e-6f;
+
+    if (dt < 0.0f ) dt = 1e-3f;
+    else if(dt > 0.3f) {
+        y_prev = x;
+        timestamp_prev = timestamp;
+        return x;
+    }
+
+    float alpha = Tf/(Tf + dt);
+    float y = alpha*y_prev + (1.0f - alpha)*x;
+    y_prev = y;
+    timestamp_prev = timestamp;
+    return y;
+}
+

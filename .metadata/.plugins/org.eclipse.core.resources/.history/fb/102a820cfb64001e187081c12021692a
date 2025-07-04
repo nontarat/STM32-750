@@ -1,0 +1,24 @@
+/*
+ * US_digital_1000.h
+ *
+ *  Created on: Oct 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_US_DIGITAL_1000_H_
+#define INC_US_DIGITAL_1000_H_
+
+/******************************************************************************/
+extern long  cpr;
+extern float full_rotation_offset;
+extern long  angle_data_prev;
+extern unsigned long velocity_calc_timestamp;
+extern float angle_prev;
+extern float Vel_Now_Motor1;
+/******************************************************************************/
+
+float getAngle(void);
+float getVelocity(void);
+/******************************************************************************/
+
+#endif /* INC_US_DIGITAL_1000_H_ */

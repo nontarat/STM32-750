@@ -1,0 +1,361 @@
+09:40:57 **** Incremental Build of configuration Debug for project newhx711 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/test.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/test.d" -MT"Core/Src/test.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/test.o"
+../Core/Src/test.c: In function 'DrawTestPage':
+../Core/Src/test.c:34:45: warning: pointer targets in passing argument 5 of 'Gui_StrCenter' differ in signedness [-Wpointer-sign]
+   34 | Gui_StrCenter(0,lcddev.height-18,WHITE,BLUE,"http://www.lcdwiki.com",16,1);//������ʾ
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:27:54: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   27 | void Gui_StrCenter(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                                  ~~~~^~~
+../Core/Src/test.c: In function 'main_test':
+../Core/Src/test.c:48:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+   48 |  DrawTestPage("zxcvzxcv");
+      |               ^~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:49:30: warning: pointer targets in passing argument 5 of 'Gui_StrCenter' differ in signedness [-Wpointer-sign]
+   49 |  Gui_StrCenter(0,30,RED,BLUE,"xzcvvxzc xarwef",16,1);//������ʾ
+      |                              ^~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:27:54: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   27 | void Gui_StrCenter(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                                  ~~~~^~~
+../Core/Src/test.c:50:30: warning: pointer targets in passing argument 5 of 'Gui_StrCenter' differ in signedness [-Wpointer-sign]
+   50 |  Gui_StrCenter(0,60,RED,BLUE,"sadfergghgfhnghxvbxvbx",16,1);//������ʾ
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:27:54: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   27 | void Gui_StrCenter(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                                  ~~~~^~~
+../Core/Src/test.c:51:32: warning: pointer targets in passing argument 5 of 'Gui_StrCenter' differ in signedness [-Wpointer-sign]
+   51 |  Gui_StrCenter(0,90,GREEN,BLUE,"4.0\" ST7796S 320X480",16,1);//������ʾ
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:27:54: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   27 | void Gui_StrCenter(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                                  ~~~~^~~
+../Core/Src/test.c:52:32: warning: pointer targets in passing argument 5 of 'Gui_StrCenter' differ in signedness [-Wpointer-sign]
+   52 |  Gui_StrCenter(0,120,BLUE,BLUE,"xiaoxcvbcvbxvfdfch 2019-09-25",16,1);//������ʾ
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:27:54: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   27 | void Gui_StrCenter(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                                  ~~~~^~~
+../Core/Src/test.c: In function 'Test_Color':
+../Core/Src/test.c:68:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+   68 |  Show_Str(20,30,BLUE,YELLOW,"BL Test",16,1);delay_ms(800);
+      |                             ^~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:70:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+   70 |  Show_Str(20,30,BLUE,YELLOW,"RED ",16,1);delay_ms(800);
+      |                             ^~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:72:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+   72 |  Show_Str(20,30,BLUE,YELLOW,"GREEN ",16,1);delay_ms(800);
+      |                             ^~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:74:28: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+   74 |  Show_Str(20,30,RED,YELLOW,"BLUE ",16,1);delay_ms(800);
+      |                            ^~~~~~~
+      |                            |
+      |                            char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c: In function 'Test_FillRec':
+../Core/Src/test.c:90:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+   90 |  DrawTestPage("����2:GUI����������");
+      |               ^~~~~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c: In function 'Test_Circle':
+../Core/Src/test.c:120:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  120 |  DrawTestPage("����3:GUI��Բ������");
+      |               ^~~~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c: In function 'English_Font_test':
+../Core/Src/test.c:140:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  140 |  DrawTestPage("����5:Ӣ����ʾ����");
+      |               ^~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:141:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  141 |  Show_Str(10,30,BLUE,YELLOW,"6X12:abcdefghijklmnopqrstuvwxyz0123456789",12,0);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:142:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  142 |  Show_Str(10,45,BLUE,YELLOW,"6X12:ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",12,1);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:143:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  143 |  Show_Str(10,60,BLUE,YELLOW,"6X12:~!@#$%^&*()_+{}:<>?/|-+.",12,0);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:144:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  144 |  Show_Str(10,80,BLUE,YELLOW,"8X16:abcdefghijklmnopqrstuvwxyz0123456789",16,0);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:145:30: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  145 |  Show_Str(10,100,BLUE,YELLOW,"8X16:ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",16,1);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:146:30: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  146 |  Show_Str(10,120,BLUE,YELLOW,"8X16:~!@#$%^&*()_+{}:<>?/|-+.",16,0);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c: In function 'Test_Triangle':
+../Core/Src/test.c:163:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  163 |  DrawTestPage("����4:GUI Triangle������");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c: In function 'Chinese_Font_test':
+../Core/Src/test.c:189:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  189 |  DrawTestPage("����6:������ʾ����");
+      |               ^~~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:190:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  190 |  Show_Str(10,30,BLUE,YELLOW,"16X16:ȫ�����Ӽ������?��˾��ӭ��",16,0);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:191:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  191 |  Show_Str(10,50,BLUE,YELLOW,"16X16:Welcomeȫ������",16,0);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:192:29: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  192 |  Show_Str(10,70,BLUE,YELLOW,"24X24:���������Ĳ���",24,1);
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:193:30: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  193 |  Show_Str(10,100,BLUE,YELLOW,"32X32:�������",32,1);
+      |                              ^~~~~~~~~~~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c: In function 'Pic_test':
+../Core/Src/test.c:206:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  206 |  DrawTestPage("PIC");
+      |               ^~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:209:32: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  209 |  Show_Str(30+12,75,BLUE,YELLOW,"QQ",16,1);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:211:32: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  211 |  Show_Str(90+12,75,BLUE,YELLOW,"QQ",16,1);
+      |                                ^~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c:213:33: warning: pointer targets in passing argument 5 of 'Show_Str' differ in signedness [-Wpointer-sign]
+  213 |  Show_Str(150+12,75,BLUE,YELLOW,"QQ",16,1);
+      |                                 ^~~~
+      |                                 |
+      |                                 char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:24:49: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   24 | void Show_Str(u16 x, u16 y, u16 fc, u16 bc, u8 *str,u8 size,u8 mode);
+      |                                             ~~~~^~~
+../Core/Src/test.c: In function 'Rotate_Test':
+../Core/Src/test.c:227:20: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+  227 |  u8 *Direction[4]={"Rotation:0","Rotation:90","Rotation:180","Rotation:270"};
+      |                    ^~~~~~~~~~~~
+../Core/Src/test.c:227:20: note: (near initialization for 'Direction[0]')
+../Core/Src/test.c:227:33: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+  227 |  u8 *Direction[4]={"Rotation:0","Rotation:90","Rotation:180","Rotation:270"};
+      |                                 ^~~~~~~~~~~~~
+../Core/Src/test.c:227:33: note: (near initialization for 'Direction[1]')
+../Core/Src/test.c:227:47: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+  227 |  u8 *Direction[4]={"Rotation:0","Rotation:90","Rotation:180","Rotation:270"};
+      |                                               ^~~~~~~~~~~~~~
+../Core/Src/test.c:227:47: note: (near initialization for 'Direction[2]')
+../Core/Src/test.c:227:62: warning: pointer targets in initialization of 'u8 *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+  227 |  u8 *Direction[4]={"Rotation:0","Rotation:90","Rotation:180","Rotation:270"};
+      |                                                              ^~~~~~~~~~~~~~
+../Core/Src/test.c:227:62: note: (near initialization for 'Direction[3]')
+../Core/Src/test.c:232:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  232 |  DrawTestPage("POSITION");
+      |               ^~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c: In function 'Touch_Test':
+../Core/Src/test.c:256:15: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  256 |  DrawTestPage("����9:Touch����(��KEY0��У׼)  ");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:257:38: warning: pointer targets in passing argument 4 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  257 |  LCD_ShowString(lcddev.width-24,0,16,"RST",1);//��ʾ��������
+      |                                      ^~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:20:45: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   20 | void LCD_ShowString(u16 x,u16 y,u8 size,u8 *p,u8 mode);
+      |                                         ~~~~^
+../Core/Src/test.c:270:19: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  270 |      DrawTestPage("touch  ");//���
+      |                   ^~~~~~~~~
+      |                   |
+      |                   char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:271:42: warning: pointer targets in passing argument 4 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  271 |      LCD_ShowString(lcddev.width-24,0,16,"RST",1);//��ʾ��������
+      |                                          ^~~~~
+      |                                          |
+      |                                          char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:20:45: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   20 | void LCD_ShowString(u16 x,u16 y,u8 size,u8 *p,u8 mode);
+      |                                         ~~~~^
+../Core/Src/test.c:292:17: warning: pointer targets in passing argument 1 of 'DrawTestPage' differ in signedness [-Wpointer-sign]
+  292 |    DrawTestPage("touch1  ");
+      |                 ^~~~~~~~~~
+      |                 |
+      |                 char *
+../Core/Src/test.c:25:23: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   25 | void DrawTestPage(u8 *str)
+      |                   ~~~~^~~
+../Core/Src/test.c:293:40: warning: pointer targets in passing argument 4 of 'LCD_ShowString' differ in signedness [-Wpointer-sign]
+  293 |    LCD_ShowString(lcddev.width-24,0,16,"RST",1);//��ʾ��������
+      |                                        ^~~~~
+      |                                        |
+      |                                        char *
+In file included from ../Core/Src/test.c:3:
+../Core/Inc/gui.h:20:45: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'char *'
+   20 | void LCD_ShowString(u16 x,u16 y,u8 size,u8 *p,u8 mode);
+      |                                         ~~~~^
+arm-none-eabi-gcc -o "newhx711.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\newhx711\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="newhx711.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: newhx711.elf
+ 
+arm-none-eabi-size   newhx711.elf 
+arm-none-eabi-objdump -h -S  newhx711.elf  > "newhx711.list"
+arm-none-eabi-objcopy  -O ihex  newhx711.elf  "newhx711.hex"
+   text	   data	    bss	    dec	    hex	filename
+  29036	     24	   1984	  31044	   7944	newhx711.elf
+Finished building: default.size.stdout
+ 
+Finished building: newhx711.hex
+ 
+Finished building: newhx711.list
+ 
+
+09:40:59 Build Finished. 0 errors, 40 warnings. (took 1s.615ms)
+

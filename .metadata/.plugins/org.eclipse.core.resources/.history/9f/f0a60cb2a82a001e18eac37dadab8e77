@@ -1,0 +1,33 @@
+#include "mpr121.h"
+#include "mpr121_def.h"
+#include "i2c.h"
+#include "main.h"
+extern I2C_HandleTypeDef hi2c1;
+/* ------------- Local defines --------------- */
+
+/* Uncomment this define to enable MPR121 IRQ interrupt */
+//#define MPR121_INT_ENABLED
+
+
+/* Number of electrodes of MPR121 */
+#define NUM_OF_ELECTRODES	13
+
+
+/* MPR121 I2C bus address */
+#define MPR121_ADDRESS_BYTE	0x5A
+/*
+*#ifdef MPR121_INT_ENABLED
+ MPR121 IRQ port, pins, exti defines
+#define MPR121_IRQ_RCC		RCC_GPIOA
+#define MPR121_IRQ_PORT		GPIOA
+#define MPR121_IRQ_PIN 		GPIO4
+#define MPR121_IRQ_EXTI 	EXTI4
+#define MPR121_IRQ_isr 		exti4_isr
+#define MPR121_IRQ_NVIC 	NVIC_EXTI4_IRQ
+#endif
+ *
+ */
+
+//local function
+
+

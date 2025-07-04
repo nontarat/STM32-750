@@ -1,0 +1,19 @@
+/*
+ * BLDCMotor.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef BLDCMOTOR_H_
+#define BLDCMOTOR_H_
+
+#include "common/base_classes/FOCMotor.h"
+
+class BLDCMotor : public FOCMotor {
+public:
+	BLDCMotor();
+	virtual ~BLDCMotor();
+};
+
+#endif /* BLDCMOTOR_H_ */

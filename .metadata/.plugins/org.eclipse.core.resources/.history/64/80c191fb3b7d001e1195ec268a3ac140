@@ -1,0 +1,18 @@
+/*
+ * sPWM.h
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_SPWM_H_
+#define INC_SPWM_H_
+
+typedef enum
+{
+	OFF = 0,
+	 ON ,
+	 AA
+}eSwitch_Type;
+
+#endif /* INC_SPWM_H_ */

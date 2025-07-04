@@ -1,0 +1,17 @@
+/*
+ * FOCMotor.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_BASE_CLASSES_FOCMOTOR_H_
+#define COMMON_BASE_CLASSES_FOCMOTOR_H_
+
+class FOCMotor {
+public:
+	FOCMotor();
+	virtual ~FOCMotor();
+};
+
+#endif /* COMMON_BASE_CLASSES_FOCMOTOR_H_ */

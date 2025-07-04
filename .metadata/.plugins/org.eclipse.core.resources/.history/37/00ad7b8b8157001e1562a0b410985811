@@ -1,0 +1,98 @@
+/*
+ * mpr121.c
+ *
+ *  Created on: Sep 20, 2023
+ *      Author: user
+ */
+#include "mpr121.h"
+#include "main.h"
+extern I2C_HandleTypeDef hi2c1;
+extern int16_t kbdAddr;
+extern uint8_t devError;
+void chkErrKBD(HAL_StatusTypeDef ret)
+{
+	if (ret != HAL_OK) devError |= devKBD; else devError &= ~devKBD;
+}
+
+void writeRegister(uint8_t reg, uint8_t *data, size_t len)
+{
+	HAL_StatusTypeDef rt = HAL_I2C_Mem_Write(&hi2c1, kbdAddr << 1, reg, sizeof(reg), data, len, min_wait_ms);
+	chkErrKBD(rt);
+
+}
+
+void readRegister(uint8_t reg, uint8_t *data, size_t len)
+{
+	HAL_StatusTypeDef rt = HAL_I2C_Master_Transmit(&hi2c1, kbdAddr << 1, &reg, 1, min_wait_ms);
+	rt |= HAL_I2C_Master_Receive(&hi2c1, kbdAddr << 1, data, len, max_wait_ms);
+	chkErrKBD(rt);
+}
+
+bool kbdInit()
+{
+	uint8_t byte = 0;
+	writeRegister(MPR121_SOFTRESET	, &byte, 1);
+	HAL_Delay(1);
+
+	//read touch
+	readRegister(MPR121_TOUCHSTATUS_H	, &byte, 1);
+	if(byte & 0x80)
+	{
+		byte = 0x80;
+		writeRegister(MPR121_TOUCHSTATUS_H, &byte, 1);
+		writeRegister(MPR121_TOUCHSTATUS_H, &byte, 1);
+	}
+
+	if(byte & 0x80)
+	{
+		return false;
+	}
+	// Put the MPR into setup mode
+		byte = 0;
+		writeRegister(MPR121_MHDR	, data, sizeof(data));
+		data[0] = 0x11;
+		data[1] = 0xD0;//0x5C - 16uA
+		data[2] = 4;//0x14;//0x5D - Period set to 16 ms (Default)
+		writeRegister(MPR121_DEBOUNCE, data, 3);
+		memset(data,0,5);
+		writeRegister(MPR121_AUTOCONFIG0, data, 5);
+
+		uint8_t dat[] = {
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH,
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH,
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH,
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH,
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH,
+				TOU_THRESH, REL_THRESH, TOU_THRESH, REL_THRESH
+		};
+		writeRegister(MPR121_TOUCHTH_0	, dat, sizeof(dat));
+		memset(dat+2,0,9);
+		dat[0] = 0xff;
+		dat[1] = 0xff;
+		dat[4] = 1;
+		dat[5] = 1;
+		dat[6] = 0xff;
+		dat[7] = 0xff;
+		kbdWriteRegs(MHDPROXR, dat, 11);
+
+		dat[0] = TOU_THRESH;// Touch Threshold
+		dat[1] = REL_THRESH;// Release Threshold
+}
+
+bool KBD_getAddr(int16_t *addr)
+{
+	int16_t i = 0, adr = MPR121_I2CADDR_DEFAULT;
+	uint8_t byte = 0x63;
+	for (i = 0; i < 4; i++) {
+			adr += i;
+			HAL_Delay(50);
+			if (HAL_I2C_Mem_Write(&hi2c1, adr << 1, MPR121_SOFTRESET, 1, &byte, 1, max_wait_ms) == HAL_OK) {
+				*addr = adr;
+				return true;
+			}
+		}
+	    return false;
+
+}
+
+uint16_t touched();

@@ -1,0 +1,18 @@
+/*
+ * Encoder.cpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#include "Encoder.hpp"
+
+Encoder::Encoder() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Encoder::~Encoder() {
+	// TODO Auto-generated destructor stub
+}
+

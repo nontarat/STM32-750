@@ -1,0 +1,15 @@
+/*
+ * mpr121.h
+ *
+ *  Created on: Jul 24, 2023
+ *      Author: user
+ */
+
+#ifndef INC_MPR121_H_
+#define INC_MPR121_H_
+#include "main.h"
+#include "mpr121_def.h"
+extern uint16_t mpr121_get_touch( void );
+extern bool mpr121_init( void );
+
+#endif /* INC_MPR121_H_ */

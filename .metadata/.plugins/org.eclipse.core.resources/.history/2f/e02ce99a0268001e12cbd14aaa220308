@@ -1,0 +1,13 @@
+/*
+ * MagneticSensorSPI.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SENSORS_MAGNETICSENSORSPI_CPP_
+#define SRC_SENSORS_MAGNETICSENSORSPI_CPP_
+
+
+
+#endif /* SRC_SENSORS_MAGNETICSENSORSPI_CPP_ */

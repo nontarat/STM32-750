@@ -1,0 +1,21 @@
+/*
+ * time_utils.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+
+#include "time_utils.h"
+
+// function buffering delay()
+void _delay(unsigned long ms){
+	HAL_Delay(ms);
+
+}
+
+// function buffering _micros()
+unsigned long _micros(){
+	return HAL_GetTick()*1000; //get microseconds
+}
+

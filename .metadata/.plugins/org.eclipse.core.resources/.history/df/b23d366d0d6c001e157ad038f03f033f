@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="programNameText" Alignment="Right" TypographyId="Headline">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="dashText" Alignment="Center" TypographyId="Headline">
+        <Translation Language="GB">-</Translation>
+      </Text>
+      <Text Id="programLengthText" Alignment="Left" TypographyId="Headline">
+        <Translation Language="GB">TIME: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1TQR" Alignment="Left" TypographyId="Headline">
+        <Translation Language="GB">ACTIVE WEAR</Translation>
+      </Text>
+      <Text Id="RecipeHeadline1" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">GARLIC CHILLI PRAWN PASTA</Translation>
+      </Text>
+      <Text Id="RecipeText1" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">A quick and easy simple prawn, garlic &amp; chilli pasta&#10;recipe, from our authentic Italian cuisine collection.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline2" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">CHICKEN PASTA SALAD</Translation>
+      </Text>
+      <Text Id="RecipeText2" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">Classic creamy pasta salad given a healthy makeover by &#10;using buckwheat pasta and a lighter... See more.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline3" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">PASTA ALLA PUTTANESCA</Translation>
+      </Text>
+      <Text Id="RecipeText3" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">Spaghetti alla puttanesca - infused with garlic, &#10;capers, anchovies and chilli for a spicy kick.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline4" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">PASTA, PESTO AND CHORIZO</Translation>
+      </Text>
+      <Text Id="RecipeText4" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">Chorizo, pesto and peas make a perfect combination, &#10;while adding a squeeze of lemon.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline5" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">KING PRAWN AND BASIL PASTA</Translation>
+      </Text>
+      <Text Id="RecipeText5" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">This king prawn and pasta meal can be whipped up &#10;in just over half an hour.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline6" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">PASTA WITH TUSCAN PESTO</Translation>
+      </Text>
+      <Text Id="RecipeText6" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">This makes a fab family meal or Italian dinner party &#10;starter - it's a real taste sensation.</Translation>
+      </Text>
+      <Text Id="RecipeHeadline7" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">BACON AND EGG LINGUINE</Translation>
+      </Text>
+      <Text Id="RecipeText7" Alignment="Left" TypographyId="RecipeListElementText">
+        <Translation Language="GB">Hearty pasta recipe proves that bacon and eggs &#10;should not be restricted to the breakfast table.</Translation>
+      </Text>
+      <Text Id="__SingleUse_N64L" Alignment="Center" TypographyId="FanKnob">
+        <Translation Language="GB">&lt;val&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3NAW" Alignment="Left" TypographyId="RecipeListElementHeadline">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_GG1M" Alignment="Center" TypographyId="TemperatureWheelCenter">
+        <Translation Language="GB">&lt;Val&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_H7JZ" Alignment="Left" TypographyId="TemperatureWheelCenter">
+        <Translation Language="GB">50</Translation>
+      </Text>
+      <Text Id="__SingleUse_7FW7" Alignment="Center" TypographyId="TemperatureWheel">
+        <Translation Language="GB">&lt;Val&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2TYP" Alignment="Left" TypographyId="TemperatureWheel">
+        <Translation Language="GB">50</Translation>
+      </Text>
+      <Text Id="OvenModeLights" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">LIGHTS</Translation>
+      </Text>
+      <Text Id="OvenModeTop" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">TOP HEAT</Translation>
+      </Text>
+      <Text Id="OvenModeButtom" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">BOTTOM HEAT</Translation>
+      </Text>
+      <Text Id="OvenModeFan" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">FAN</Translation>
+      </Text>
+      <Text Id="OvenModeGrill" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">GRILL</Translation>
+      </Text>
+      <Text Id="OvenModeGrillFan" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">FAN + GRILL</Translation>
+      </Text>
+      <Text Id="OvenModeClean" Alignment="Center" TypographyId="OvenMode">
+        <Translation Language="GB">CLEAN</Translation>
+      </Text>
+      <Text Id="OvenWheelText" Alignment="Center" TypographyId="ovenTimerWheel">
+        <Translation Language="GB">&lt;val&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_52RS" Alignment="Right" TypographyId="OvenTemperatureSelected">
+        <Translation Language="GB">&lt;val&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_RDMG" Alignment="Left" TypographyId="OvenTemperatureSelected">
+        <Translation Language="GB">215</Translation>
+      </Text>
+      <Text Id="__SingleUse_8X03" Alignment="Left" TypographyId="OvenHeat">
+        <Translation Language="GB">OVEN HEAT</Translation>
+      </Text>
+      <Text Id="OvenWheelCenterText" Alignment="Center" TypographyId="OvenTimerWheelCenter">
+        <Translation Language="GB">&lt;val&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HO82" Alignment="Left" TypographyId="HomeUISplashTemp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NBNH" Alignment="Left" TypographyId="HomeUiSplashTempUnit">
+        <Translation Language="GB">°F</Translation>
+      </Text>
+      <Text Id="HomeUISplashBathroom" Alignment="Center" TypographyId="HomeUISplashRoom">
+        <Translation Language="GB">BATHROOM</Translation>
+      </Text>
+      <Text Id="HomeUISplashKitchen" Alignment="Center" TypographyId="HomeUISplashRoom">
+        <Translation Language="GB">KITCHEN</Translation>
+      </Text>
+      <Text Id="HomeUISplashBottomlineHeatingUp" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">HEATING UP</Translation>
+      </Text>
+      <Text Id="__SingleUse_P0VB" Alignment="Left" TypographyId="HomeUISplashWakeUp">
+        <Translation Language="GB">TAP TO WAKE ME UP</Translation>
+      </Text>
+      <Text Id="HomeUIWheelDevices" Alignment="Center" TypographyId="HomeUIWheelBottomline">
+        <Translation Language="GB">DEVICES</Translation>
+      </Text>
+      <Text Id="HomeUIWheelDevicesCenterItem" Alignment="Center" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">DEVICES</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBathroom" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">BATHROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBedroom" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">BEDROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBasement" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">BASEMENT</Translation>
+      </Text>
+      <Text Id="HomeUIWheelLivingRoom" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">LIVING ROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelKitchen" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">KITCHEN</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBathroomSelected" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">BATHROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBedroomSelected" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">BEDROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelBasementSelected" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">BASEMENT</Translation>
+      </Text>
+      <Text Id="HomeUIWheelLivingRoomSelected" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">LIVING ROOM</Translation>
+      </Text>
+      <Text Id="HomeUIWheelKitchenSelected" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">KITCHEN</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineDevices" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">CONNECTED DEVICES</Translation>
+      </Text>
+      <Text Id="HomeUIWheelHeatingUp" Alignment="Center" TypographyId="HomeUIWheelBottomline">
+        <Translation Language="GB">HEATING UP</Translation>
+      </Text>
+      <Text Id="HomeUIWheelIdle" Alignment="Center" TypographyId="HomeUIWheelBottomline">
+        <Translation Language="GB">IDLE</Translation>
+      </Text>
+      <Text Id="HomeUIWheelHeatingUpCenter" Alignment="Center" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">HEATING UP</Translation>
+      </Text>
+      <Text Id="HomeUIWheelIdleCenter" Alignment="Center" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">IDLE</Translation>
+      </Text>
+      <Text Id="HomeUIWheelDevice" Alignment="Center" TypographyId="HomeUIWheelBottomline">
+        <Translation Language="GB">DEVICE</Translation>
+      </Text>
+      <Text Id="HomeUIWheelDeviceCenterItem" Alignment="Center" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">DEVICE</Translation>
+      </Text>
+      <Text Id="HomeUIInfo" Alignment="Center" TypographyId="HomeUIWheelHeadline">
+        <Translation Language="GB">AIR / HUMIDITY</Translation>
+      </Text>
+      <Text Id="__SingleUse_VTBC" Alignment="Center" TypographyId="HomeUIWheelWildcardSelectedItem">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P97C" Alignment="Left" TypographyId="HomeUIWheelWildcardSelectedItem">
+        <Translation Language="GB">73</Translation>
+      </Text>
+      <Text Id="__SingleUse_BJOQ" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">°F</Translation>
+      </Text>
+      <Text Id="__SingleUse_XE6F" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">FLOOR</Translation>
+      </Text>
+      <Text Id="__SingleUse_GQOM" Alignment="Center" TypographyId="HomeUIInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4PDE" Alignment="Left" TypographyId="HomeUIInfo">
+        <Translation Language="GB">64</Translation>
+      </Text>
+      <Text Id="__SingleUse_H9W4" Alignment="Center" TypographyId="HomeUIInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4OJ6" Alignment="Left" TypographyId="HomeUIInfo">
+        <Translation Language="GB">48</Translation>
+      </Text>
+      <Text Id="__SingleUse_SIW6" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">SCHEDULE</Translation>
+      </Text>
+      <Text Id="__SingleUse_YTVE" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">WEEKDAYS</Translation>
+      </Text>
+      <Text Id="__SingleUse_HF53" Alignment="Center" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">6:00 AM TO 10:00 PM</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineBathroom" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">BATHROOM</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineKitchen" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">KITCHEN</Translation>
+      </Text>
+      <Text Id="HomeUIDeviceNameBathtub" Alignment="Left" TypographyId="DeviceName">
+        <Translation Language="GB">BATHTUB</Translation>
+      </Text>
+      <Text Id="HomeUIDeviceNameOven" Alignment="Left" TypographyId="DeviceName">
+        <Translation Language="GB">OVEN</Translation>
+      </Text>
+      <Text Id="HomeUIDeviceNameControl" Alignment="Left" TypographyId="DeviceName">
+        <Translation Language="GB">HOME CONTROL</Translation>
+      </Text>
+      <Text Id="HomeUIDeviceNameHood" Alignment="Left" TypographyId="DeviceName">
+        <Translation Language="GB">EXTRACTOR HOOD</Translation>
+      </Text>
+      <Text Id="HomeUIDeviceNameMachine" Alignment="Left" TypographyId="DeviceName">
+        <Translation Language="GB">WASHING MACHINE</Translation>
+      </Text>
+      <Text Id="HomeUIOvenInfo" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="HomeUIOvenInfoValue" Alignment="Right" TypographyId="DeviceInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P8EB" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">WATER TEMPERATURE</Translation>
+      </Text>
+      <Text Id="__SingleUse_PPNC" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">100 °CF</Translation>
+      </Text>
+      <Text Id="__SingleUse_DGKG" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">JET SPEED</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q75Q" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">LIGHT CONTROL</Translation>
+      </Text>
+      <Text Id="__SingleUse_MCIX" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">ON</Translation>
+      </Text>
+      <Text Id="__SingleUse_AS7O" Alignment="Left" TypographyId="DeviceInfo">
+        <Translation Language="GB">LEVEL 3</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineBathroomDevices" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">BATHROOM - 3 DEVICES</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineKitchenDevices" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">KITCHEN - 4 DEVICES</Translation>
+      </Text>
+      <Text Id="HomeUIHeadlineRoomTemperatures" Alignment="Center" TypographyId="HomeUIMenuHeadline">
+        <Translation Language="GB">ROOM TEMPERATURES</Translation>
+      </Text>
+      <Text Id="__SingleUse_SAQX" Alignment="Center" TypographyId="HomeUIWheelWildcardSelectedItem">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5KEZ" Alignment="Left" TypographyId="HomeUIWheelWildcardSelectedItem">
+        <Translation Language="GB">73</Translation>
+      </Text>
+      <Text Id="__SingleUse_TJYI" Alignment="Center" TypographyId="HomeUIWheelHeadlineSelectedItem">
+        <Translation Language="GB">°F</Translation>
+      </Text>
+      <Text Id="__SingleUse_4VPO" Alignment="Center" TypographyId="HomeUIWheelWildcard">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AG3M" Alignment="Left" TypographyId="HomeUIWheelWildcard">
+        <Translation Language="GB">73</Translation>
+      </Text>
+      <Text Id="__SingleUse_7QP1" Alignment="Left" TypographyId="HomeUIWheelBottomlineSelectedItem">
+        <Translation Language="GB">°F</Translation>
+      </Text>
+      <Text Id="SingleUseId109" Alignment="Left" TypographyId="HomeUISplashTemp">
+        <Translation Language="GB">73</Translation>
+      </Text>
+      <Text Id="HomeUISplashBottomlineIdle" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">IDLE</Translation>
+      </Text>
+      <Text Id="__SingleUse_XE1F" Alignment="Center" TypographyId="HomeUISplashHeat">
+        <Translation Language="GB">HEATING UP</Translation>
+      </Text>
+      <Text Id="__SingleUse_7I27" Alignment="Left" TypographyId="HomeUISplashTemp">
+        <Translation Language="GB">73</Translation>
+      </Text>
+      <Text Id="__SingleUse_AZTP" Alignment="Right" TypographyId="OvenSplashClock">
+        <Translation Language="GB">09</Translation>
+      </Text>
+      <Text Id="__SingleUse_BVWG" Alignment="Left" TypographyId="OvenSplashClock">
+        <Translation Language="GB">18</Translation>
+      </Text>
+      <Text Id="__SingleUse_X3W4" Alignment="Center" TypographyId="OvenSplashClock">
+        <Translation Language="GB">:</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZVQC" Alignment="Left" TypographyId="OvenSplashAmPm">
+        <Translation Language="GB">AM</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Headline" Font="SairaCondensed-Medium.ttf" Size="22" Bpp="4" Direction="LTR" FallbackCharacter="X" WildcardCharacters=":." WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="RecipeListElementHeadline" Font="OpenSans-Semibold.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RecipeListElementText" Font="OpenSans-SemiboldItalic.ttf" Size="13" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="IngredientsText" Font="OpenSans-Regular.ttf" Size="16" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="IngredientsHeadline" Font="OpenSans-Italic.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="StepHeadline" Font="OpenSans-Semibold.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="NutritionHeadline" Font="OpenSans-Semibold.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="NutritionName" Font="OpenSans-Regular.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="FanKnob" Font="SairaSemiCondensed-Medium.ttf" Size="34" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="TemperatureWheelCenter" Font="OpenSans-Semibold.ttf" Size="26" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="TemperatureWheel" Font="OpenSans-Semibold.ttf" Size="23" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenMode" Font="Exo2-SemiBold.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="°Chm" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenBottomBar" Font="Exo2-Medium.ttf" Size="34" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="ovenTimerWheel" Font="Exo2-Medium.ttf" Size="26" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenTemperatureSelected" Font="Exo2-Medium.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="°C" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenHeat" Font="Exo2-Medium.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="OvenTimerWheelCenter" Font="Exo2-Medium.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUISplashTemp" Font="Asap-Bold.ttf" Size="94" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUiSplashTempUnit" Font="Asap-Bold.ttf" Size="25" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="HomeUISplashRoom" Font="Asap-Bold.ttf" Size="24" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="HomeUISplashHeat" Font="Asap-Bold.ttf" Size="16" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUISplashWakeUp" Font="Asap-Regular.ttf" Size="26" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="HomeUIWheelBottomline" Font="Asap-Bold.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUIWheelBottomlineSelectedItem" Font="Asap-Bold.ttf" Size="12" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUIWheelHeadline" Font="Asap-Bold.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUIWheelHeadlineSelectedItem" Font="Asap-Bold.ttf" Size="18" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUIMenuHeadline" Font="Asap-Bold.ttf" Size="26" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="HomeUIWheelWildcardSelectedItem" Font="Asap-Bold.ttf" Size="60" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="HomeUIInfo" Font="Asap-Bold.ttf" Size="22" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="DeviceName" Font="Asap-Bold.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="DeviceInfo" Font="Asap-Bold.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters="CF°:;., +-" WildcardCharacterRanges="0-9,A-Z" />
+    <Typography Id="HomeUIWheelWildcard" Font="Asap-Bold.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenSplashClock" Font="Exo2-Medium.ttf" Size="80" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=":" WildcardCharacterRanges="0-9" />
+    <Typography Id="OvenSplashAmPm" Font="Exo2-Medium.ttf" Size="24" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=":APM" />
+  </Typographies>
+</TextDatabase>

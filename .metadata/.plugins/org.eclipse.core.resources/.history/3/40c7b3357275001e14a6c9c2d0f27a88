@@ -1,0 +1,17 @@
+/*
+ * MagneticSensorSPI.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef SENSORS_MAGNETICSENSORSPI_H_
+#define SENSORS_MAGNETICSENSORSPI_H_
+
+class MagneticSensorSPI : public Sensor {
+public:
+	MagneticSensorSPI();
+	virtual ~MagneticSensorSPI();
+};
+
+#endif /* SENSORS_MAGNETICSENSORSPI_H_ */

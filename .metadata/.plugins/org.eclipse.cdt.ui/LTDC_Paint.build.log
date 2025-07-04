@@ -1,0 +1,42 @@
+09:54:10 **** Incremental Build of configuration Debug for project LTDC_Paint ****
+make -j4 all 
+arm-none-eabi-gcc "C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Utilities/Lcd_Trace/lcd_trace.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_USB_FS -DAPPLICATION_ADDRESS=0x90000000 -DSTM32H750xx -DUSE_HAL_DRIVER -c -I../../Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/STM32H750B-DK -I../../../../../../../Utilities/Fonts -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Utilities -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../../../../../../../Middlewares/Third_Party/FatFs/src -I../../../../../../../Utilities/lcd -I../../../../../../../Utilities/Lcd_Trace -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Utilities/lcd_trace.d" -MT"Utilities/lcd_trace.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Utilities/lcd_trace.o"
+arm-none-eabi-gcc "C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_USB_FS -DAPPLICATION_ADDRESS=0x90000000 -DSTM32H750xx -DUSE_HAL_DRIVER -c -I../../Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/STM32H750B-DK -I../../../../../../../Utilities/Fonts -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Utilities -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../../../../../../../Middlewares/Third_Party/FatFs/src -I../../../../../../../Utilities/lcd -I../../../../../../../Utilities/Lcd_Trace -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/STM32_USBH_Library/Core/usbh_core.d" -MT"Middlewares/STM32_USBH_Library/Core/usbh_core.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_USBH_Library/Core/usbh_core.o"
+arm-none-eabi-gcc "C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_USB_FS -DAPPLICATION_ADDRESS=0x90000000 -DSTM32H750xx -DUSE_HAL_DRIVER -c -I../../Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/STM32H750B-DK -I../../../../../../../Utilities/Fonts -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Utilities -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../../../../../../../Middlewares/Third_Party/FatFs/src -I../../../../../../../Utilities/lcd -I../../../../../../../Utilities/Lcd_Trace -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/STM32_USBH_Library/Core/usbh_ctlreq.d" -MT"Middlewares/STM32_USBH_Library/Core/usbh_ctlreq.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_USBH_Library/Core/usbh_ctlreq.o"
+arm-none-eabi-gcc "C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_USB_FS -DAPPLICATION_ADDRESS=0x90000000 -DSTM32H750xx -DUSE_HAL_DRIVER -c -I../../Inc -I../../../../../../../Drivers/CMSIS/Include -I../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../../../../../Drivers/BSP/STM32H750B-DK -I../../../../../../../Utilities/Fonts -I../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../Utilities -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc -I../../../../../../../Middlewares/Third_Party/FatFs/src -I../../../../../../../Utilities/lcd -I../../../../../../../Utilities/Lcd_Trace -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/STM32_USBH_Library/Core/usbh_ioreq.d" -MT"Middlewares/STM32_USBH_Library/Core/usbh_ioreq.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Middlewares/STM32_USBH_Library/Core/usbh_ioreq.o"
+In file included from ../../../../../../../Drivers/BSP/STM32H750B-DK/stm32h750b_discovery_lcd.h:29,
+                 from ../../Inc/utilities_conf.h:29,
+                 from C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Utilities/Lcd_Trace/lcd_trace.h:25,
+                 from C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Utilities/Lcd_Trace/lcd_trace.c:32:
+../../Inc/stm32h750b_discovery_conf.h:28:10: fatal error: stm32h7xx_hal.h: No such file or directory
+   28 | #include "stm32h7xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:27,
+                 from C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c:21:
+../../Inc/usbh_conf.h:24:10: fatal error: stm32h7xx_hal.h: No such file or directory
+   24 | #include "stm32h7xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h:28,
+                 from C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c:20:
+../../Inc/usbh_conf.h:24:10: fatal error: stm32h7xx_hal.h: No such file or directory
+   24 | #include "stm32h7xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from ../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h:27,
+                 from ../../../../../../../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ctlreq.h:28,
+                 from C:/Users/user/Downloads/STM32CubeH7-master/STM32CubeH7-master/Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c:20:
+../../Inc/usbh_conf.h:24:10: fatal error: stm32h7xx_hal.h: No such file or directory
+   24 | #include "stm32h7xx_hal.h"
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Utilities/subdir.mk:22: Utilities/lcd_trace.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Middlewares/STM32_USBH_Library/Core/subdir.mk:28: Middlewares/STM32_USBH_Library/Core/usbh_core.o] Error 1
+make: *** [Middlewares/STM32_USBH_Library/Core/subdir.mk:32: Middlewares/STM32_USBH_Library/Core/usbh_ioreq.o] Error 1
+make: *** [Middlewares/STM32_USBH_Library/Core/subdir.mk:30: Middlewares/STM32_USBH_Library/Core/usbh_ctlreq.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:54:12 Build Failed. 9 errors, 0 warnings. (took 1s.695ms)
+

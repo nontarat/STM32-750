@@ -1,0 +1,53 @@
+/*
+ * Sensor.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#include "Sensor.h"
+#include "../Src/common/foc_utils.h"
+#include "../Src/common/time_utils.h"
+
+Sensor::Sensor() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Sensor::~Sensor() {
+	// TODO Auto-generated destructor stub
+}
+
+
+/**
+* returns 0 if it does need search for absolute zero
+* 0 - magnetic sensor (& encoder with index which is found)
+* 1 - encoder with index (with index not found yet)
+*/
+int Sensor::needsSearch(){
+   return 0;
+}
+
+/** get current angular velocity (rad/s)*/
+float Sensor::getVelocity(){
+
+   // calculate sample time
+   unsigned long now_us = _micros();
+   float Ts = (now_us - velocity_calc_timestamp)*1e-6;
+   // quick fix for strange cases (micros overflow)
+   if(Ts <= 0 || Ts > 0.5) Ts = 1e-3;
+
+   // current angle
+   float angle_c = getAngle();
+   // velocity calculation
+   float vel = (angle_c - angle_prev)/Ts;
+
+   // save variables for future pass
+   angle_prev = angle_c;
+   velocity_calc_timestamp = now_us;
+   return vel;
+}
+
+ Sensor::setAngle(float angle_value) {
+	angle_prev = angle_value;
+}

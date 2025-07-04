@@ -1,0 +1,60 @@
+/*
+ * Sensor.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+#define SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+#include "main.h"
+
+/**
+ *  Direction structure
+ */
+enum Direction{
+    CW      = 1,  //clockwise
+    CCW     = -1, // counter clockwise
+    UNKNOWN = 0   //not yet known or invalid state
+};
+
+
+/**
+ *  Pullup configuration structure
+ */
+enum Pullup{
+    INTERN, //!< Use internal pullups
+    EXTERN //!< Use external pullups
+};
+
+/**
+ *  Sensor abstract class definition
+ * Each sensor needs to have these functions implemented
+ */
+class Sensor {
+public:
+    /** Get current angle (rad) */
+    virtual float getAngle() = 0;
+
+    /** Get current angular velocity (rad/s) */
+    virtual float getVelocity() = 0;
+
+    /**
+     * Returns 0 if it does need to search for absolute zero
+     * 0 - magnetic sensor (& encoder with index which is found)
+     * 1 - encoder with index (with index not found yet)
+     */
+    virtual int needsSearch() = 0;
+
+    /** Set angle to zero */
+    virtual void setAngle(float angle) = 0;
+
+private:
+    // Velocity calculation variables
+    float angle_prev = 0;               //!< Angle in previous velocity calculation step
+    long velocity_calc_timestamp = 0;  //!< Last velocity calculation timestamp
+};
+
+
+
+#endif /* SRC_COMMON_BASE_CLASSES_SENSOR_HPP_ */

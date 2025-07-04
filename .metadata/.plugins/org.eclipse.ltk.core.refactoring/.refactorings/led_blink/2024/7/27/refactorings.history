@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;led_blink/Core/Inc/FLASH_PAGE_C0.H&apos; to &apos;FLASH_PAGE_C0.h&apos;" description="Rename resource &apos;FLASH_PAGE_C0.H&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/FLASH_PAGE_C0.H" name="FLASH_PAGE_C0.h" stamp="1720169607437" updateReferences="true"/>
+</session>

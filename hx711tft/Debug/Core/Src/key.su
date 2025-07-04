@@ -1,0 +1,2 @@
+../Core/Src/key.c:12:6:KEY_Init	40	static
+../Core/Src/key.c:35:4:KEY_Scan	16	static

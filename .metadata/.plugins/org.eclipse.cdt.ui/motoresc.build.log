@@ -1,0 +1,10 @@
+11:54:14 **** Incremental Build of configuration Debug for project motoresc ****
+make -j4 all 
+arm-none-eabi-size   motoresc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11332	     88	   1728	  13148	   335c	motoresc.elf
+Finished building: default.size.stdout
+ 
+
+11:54:15 Build Finished. 0 errors, 0 warnings. (took 220ms)
+

@@ -1,0 +1,10 @@
+13:10:45 **** Incremental Build of configuration Debug for project f103_oled ****
+make -j4 all 
+arm-none-eabi-size  f103_oled.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18304	     28	   2684	  21016	   5218	f103_oled.elf
+Finished building: default.size.stdout
+ 
+
+13:10:46 Build Finished. 0 errors, 0 warnings. (took 187ms)
+

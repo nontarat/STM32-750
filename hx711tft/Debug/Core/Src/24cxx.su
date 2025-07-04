@@ -1,0 +1,8 @@
+../Core/Src/24cxx.c:12:6:AT24CXX_Init	8	static
+../Core/Src/24cxx.c:19:4:AT24CXX_ReadOneByte	24	static
+../Core/Src/24cxx.c:42:6:AT24CXX_WriteOneByte	16	static
+../Core/Src/24cxx.c:64:6:AT24CXX_WriteLenByte	24	static
+../Core/Src/24cxx.c:78:5:AT24CXX_ReadLenByte	24	static
+../Core/Src/24cxx.c:94:4:AT24CXX_Check	16	static
+../Core/Src/24cxx.c:112:6:AT24CXX_Read	24	static
+../Core/Src/24cxx.c:124:6:AT24CXX_Write	16	static

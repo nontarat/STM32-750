@@ -1,0 +1,13 @@
+/*
+ * MagneticSensorSPI.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SENSORS_MAGNETICSENSORSPI_HPP_
+#define SRC_SENSORS_MAGNETICSENSORSPI_HPP_
+
+
+
+#endif /* SRC_SENSORS_MAGNETICSENSORSPI_HPP_ */

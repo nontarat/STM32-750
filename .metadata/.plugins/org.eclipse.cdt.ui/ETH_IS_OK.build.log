@@ -1,0 +1,23 @@
+12:01:38 **** Incremental Build of configuration Debug for project ETH_IS_OK ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DSTM32H750xx -DDATA_IN_D2_SRAM -DUSE_HAL_DRIVER -DDEBUG -c -I../Core/Inc -I../LWIP/App -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/BSP/Components/lan8742 -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/compat/posix -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/net -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/compat/stdc -I../Middlewares/Third_Party/LwIP/system/arch -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:62:13: warning: 'MPU_Initialize' declared 'static' but never defined [-Wunused-function]
+   62 | static void MPU_Initialize(void);
+      |             ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ETH_IS_OK.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\ETH_IS_OK\STM32H750XBHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ETH_IS_OK.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ETH_IS_OK.elf
+ 
+arm-none-eabi-size   ETH_IS_OK.elf 
+arm-none-eabi-objdump -h -S  ETH_IS_OK.elf  > "ETH_IS_OK.list"
+arm-none-eabi-objcopy  -O ihex  ETH_IS_OK.elf  "ETH_IS_OK.hex"
+   text	   data	    bss	    dec	    hex	filename
+ 113536	    152	 350547	 464235	  7156b	ETH_IS_OK.elf
+Finished building: default.size.stdout
+ 
+Finished building: ETH_IS_OK.hex
+ 
+Finished building: ETH_IS_OK.list
+ 
+
+12:01:46 Build Finished. 0 errors, 1 warnings. (took 7s.779ms)
+

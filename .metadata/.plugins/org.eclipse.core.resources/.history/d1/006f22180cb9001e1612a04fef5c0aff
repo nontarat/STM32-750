@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SSI TEST </title>
+<!--<meta http-equiv="refresh" content ="1">-->
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TEST PAGE FOR SSI</h2>
+
+<table style="width:100%">
+  <tr>
+    <td>V1</td>
+    <td>V2</td>
+    <td>V3</td>
+  </tr>
+  <tr>
+    <td id="xValue"><!--#x--></td>
+    <td id="yValue"><!--#y--></td>
+    <td><!--#z--></td>
+  </tr>
+</table>
+      <button type="button" onclick="sendDataCount()">Count Data</button>
+
+ <script>
+ function sendDataCount() {
+  // ดึงค่าอุณหภูมิและความชื้นจากฟอร์ม
+  var temperature = document.getElementById("temperature").value;
+  var humidity = document.getElementById("humidity").value;
+
+      document.getElementById("xValue").innerHTML = temperature;
+      document.getElementById("yValue").innerHTML = humidity;
+
+
+  // สร้าง URL ด้วยข้อมูลที่ได้
+  var url = "https://tanakulgroup.com/iot_project/connect.php?" +
+            "temperature=" + encodeURIComponent(temperature) +
+            "&humidity=" + encodeURIComponent(humidity);
+
+  // ส่งข้อมูลไปยัง URL โดยใช้ XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // การทำงานเมื่อสำเร็จ
+      console.log("Data sent successfully!");
+    }
+  };
+  xhr.send();
+  </script>
+
+<p>This page refreshes every 1 second.</p>
+
+</body>
+</html>

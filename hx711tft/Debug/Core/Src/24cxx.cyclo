@@ -1,0 +1,8 @@
+24cxx.c:12:6:AT24CXX_Init	1
+24cxx.c:19:4:AT24CXX_ReadOneByte	1
+24cxx.c:42:6:AT24CXX_WriteOneByte	1
+24cxx.c:64:6:AT24CXX_WriteLenByte	2
+24cxx.c:78:5:AT24CXX_ReadLenByte	2
+24cxx.c:94:4:AT24CXX_Check	3
+24cxx.c:112:6:AT24CXX_Read	2
+24cxx.c:124:6:AT24CXX_Write	2

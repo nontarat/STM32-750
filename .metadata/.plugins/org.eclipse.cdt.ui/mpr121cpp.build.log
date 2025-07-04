@@ -1,0 +1,92 @@
+11:53:18 **** Incremental Build of configuration Debug for project mpr121cpp ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ "../Core/Src/mpr121.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mpr121.d" -MT"Core/Src/mpr121.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/mpr121.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+In file included from ../Core/Src/mpr121.cpp:7:
+../Core/Inc/mpr121.h:11:8: error: 'I2C_HandleTypeDef' does not name a type
+   11 | extern I2C_HandleTypeDef hi2c1;
+      |        ^~~~~~~~~~~~~~~~~
+../Core/Inc/mpr121.h:73:14: error: 'uint8_t' has not been declared
+   73 |   bool begin(uint8_t i2caddr = MPR121_I2CADDR_DEFAULT,
+      |              ^~~~~~~
+../Core/Inc/mpr121.h:74:14: error: 'uint8_t' has not been declared
+   74 |              uint8_t touchThreshold = MPR121_TOUCH_THRESHOLD_DEFAULT,
+      |              ^~~~~~~
+../Core/Inc/mpr121.h:75:14: error: 'uint8_t' has not been declared
+   75 |              uint8_t releaseThreshold = MPR121_RELEASE_THRESHOLD_DEFAULT);
+      |              ^~~~~~~
+../Core/Inc/mpr121.h:77:3: error: 'uint16_t' does not name a type
+   77 |   uint16_t filteredData(uint8_t t);
+      |   ^~~~~~~~
+../Core/Inc/mpr121.h:1:1: note: 'uint16_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+  +++ |+#include <cstdint>
+    1 | /*
+../Core/Inc/mpr121.h:78:3: error: 'uint16_t' does not name a type
+   78 |   uint16_t baselineData(uint8_t t);
+      |   ^~~~~~~~
+../Core/Inc/mpr121.h:78:3: note: 'uint16_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Inc/mpr121.h:80:3: error: 'uint8_t' does not name a type
+   80 |   uint8_t readRegister8(uint8_t reg);
+      |   ^~~~~~~
+../Core/Inc/mpr121.h:80:3: note: 'uint8_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Inc/mpr121.h:81:3: error: 'uint16_t' does not name a type
+   81 |   uint16_t readRegister16(uint8_t reg);
+      |   ^~~~~~~~
+../Core/Inc/mpr121.h:81:3: note: 'uint16_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Inc/mpr121.h:82:22: error: 'uint8_t' has not been declared
+   82 |   void writeRegister(uint8_t reg, uint8_t value);
+      |                      ^~~~~~~
+../Core/Inc/mpr121.h:82:35: error: 'uint8_t' has not been declared
+   82 |   void writeRegister(uint8_t reg, uint8_t value);
+      |                                   ^~~~~~~
+../Core/Inc/mpr121.h:83:3: error: 'uint16_t' does not name a type
+   83 |   uint16_t touched(void);
+      |   ^~~~~~~~
+../Core/Inc/mpr121.h:83:3: note: 'uint16_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Inc/mpr121.h:85:23: error: 'uint8_t' has not been declared
+   85 |   void setThreshholds(uint8_t touch, uint8_t release)
+      |                       ^~~~~~~
+../Core/Inc/mpr121.h:85:38: error: 'uint8_t' has not been declared
+   85 |   void setThreshholds(uint8_t touch, uint8_t release)
+      |                                      ^~~~~~~
+../Core/Inc/mpr121.h:87:22: error: 'uint8_t' has not been declared
+   87 |   void setThresholds(uint8_t touch, uint8_t release);
+      |                      ^~~~~~~
+../Core/Inc/mpr121.h:87:37: error: 'uint8_t' has not been declared
+   87 |   void setThresholds(uint8_t touch, uint8_t release);
+      |                                     ^~~~~~~
+../Core/Src/mpr121.cpp:11:6: error: 'bool Adafruit_MPR121::begin' is not a static data member of 'class Adafruit_MPR121'
+   11 | bool Adafruit_MPR121::begin(uint8_t i2caddr, TwoWire *theWire,
+      |      ^~~~~~~~~~~~~~~
+../Core/Src/mpr121.cpp:11:29: error: 'uint8_t' was not declared in this scope
+   11 | bool Adafruit_MPR121::begin(uint8_t i2caddr, TwoWire *theWire,
+      |                             ^~~~~~~
+../Core/Src/mpr121.cpp:8:1: note: 'uint8_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+    7 | #include "mpr121.h"
+  +++ |+#include <cstdint>
+    8 | Adafruit_MPR121::Adafruit_MPR121() {}
+../Core/Src/mpr121.cpp:11:46: error: 'TwoWire' was not declared in this scope
+   11 | bool Adafruit_MPR121::begin(uint8_t i2caddr, TwoWire *theWire,
+      |                                              ^~~~~~~
+../Core/Src/mpr121.cpp:11:55: error: 'theWire' was not declared in this scope
+   11 | bool Adafruit_MPR121::begin(uint8_t i2caddr, TwoWire *theWire,
+      |                                                       ^~~~~~~
+../Core/Src/mpr121.cpp:12:29: error: 'uint8_t' was not declared in this scope
+   12 |                             uint8_t touchThreshold, uint8_t releaseThreshold) {
+      |                             ^~~~~~~
+../Core/Src/mpr121.cpp:12:29: note: 'uint8_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Src/mpr121.cpp:12:53: error: 'uint8_t' was not declared in this scope
+   12 |                             uint8_t touchThreshold, uint8_t releaseThreshold) {
+      |                                                     ^~~~~~~
+../Core/Src/mpr121.cpp:12:53: note: 'uint8_t' is defined in header '<cstdint>'; did you forget to '#include <cstdint>'?
+../Core/Src/mpr121.cpp:12:77: error: expression list treated as compound expression in initializer [-fpermissive]
+   12 |                             uint8_t touchThreshold, uint8_t releaseThreshold) {
+      |                                                                             ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/mpr121.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+11:53:18 Build Failed. 24 errors, 0 warnings. (took 873ms)
+

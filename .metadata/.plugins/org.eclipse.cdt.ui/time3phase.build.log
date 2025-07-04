@@ -1,0 +1,19 @@
+12:03:18 **** Incremental Build of configuration Debug for project time3phase ****
+make -j4 all 
+arm-none-eabi-gcc -o "time3phase.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\time3phase\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="time3phase.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: time3phase.elf
+ 
+arm-none-eabi-size   time3phase.elf 
+arm-none-eabi-objdump -h -S  time3phase.elf  > "time3phase.list"
+arm-none-eabi-objcopy  -O ihex  time3phase.elf  "time3phase.hex"
+   text	   data	    bss	    dec	    hex	filename
+  14392	     24	   1800	  16216	   3f58	time3phase.elf
+Finished building: default.size.stdout
+ 
+Finished building: time3phase.hex
+Finished building: time3phase.list
+ 
+ 
+
+12:03:18 Build Finished. 0 errors, 0 warnings. (took 612ms)
+

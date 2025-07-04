@@ -1,0 +1,10 @@
+10:21:26 **** Incremental Build of configuration Debug for project eth_qspi ****
+make -j4 all 
+arm-none-eabi-size  eth_qspi.elf 
+   text	   data	    bss	    dec	    hex	filename
+  96648	    152	 350443	 447243	  6d30b	eth_qspi.elf
+Finished building: default.size.stdout
+ 
+
+10:21:45 Build Finished. 0 errors, 0 warnings. (took 18s.633ms)
+

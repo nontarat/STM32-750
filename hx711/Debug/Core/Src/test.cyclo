@@ -1,0 +1,10 @@
+test.c:23:6:DrawTestPage	1
+test.c:44:6:main_test	1
+test.c:62:6:Test_Color	1
+test.c:85:6:Test_FillRec	3
+test.c:115:6:Test_Circle	3
+test.c:136:6:English_Font_test	1
+test.c:158:6:Test_Triangle	3
+test.c:185:6:Chinese_Font_test	1
+test.c:202:6:Pic_test	1
+test.c:223:6:Rotate_Test	2

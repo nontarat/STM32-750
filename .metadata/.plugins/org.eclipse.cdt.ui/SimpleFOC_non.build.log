@@ -1,0 +1,19 @@
+13:23:11 **** Incremental Build of configuration Debug for project SimpleFOC_non ****
+make -j4 all 
+arm-none-eabi-g++ -o "SimpleFOC_non.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\SimpleFOC_non\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SimpleFOC_non.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: SimpleFOC_non.elf
+ 
+arm-none-eabi-size   SimpleFOC_non.elf 
+arm-none-eabi-objdump -h -S  SimpleFOC_non.elf  > "SimpleFOC_non.list"
+arm-none-eabi-objcopy  -O ihex  SimpleFOC_non.elf  "SimpleFOC_non.hex"
+   text	   data	    bss	    dec	    hex	filename
+  25420	   1128	   2328	  28876	   70cc	SimpleFOC_non.elf
+Finished building: default.size.stdout
+ 
+Finished building: SimpleFOC_non.list
+ 
+Finished building: SimpleFOC_non.hex
+ 
+
+13:23:13 Build Finished. 0 errors, 0 warnings. (took 2s.119ms)
+

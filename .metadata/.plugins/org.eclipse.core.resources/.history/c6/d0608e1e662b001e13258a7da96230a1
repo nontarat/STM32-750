@@ -1,0 +1,18 @@
+/*
+ * hdr.h
+ *
+ *  Created on: Apr 25, 2021
+ *      Author: alarm
+ */
+
+//#define SET_STATIC_MEM
+
+#include "main.h"
+#define SET_KBD
+
+
+
+
+
+
+

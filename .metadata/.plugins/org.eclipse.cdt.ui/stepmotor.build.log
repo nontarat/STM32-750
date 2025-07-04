@@ -1,0 +1,19 @@
+11:58:04 **** Incremental Build of configuration Debug for project stepmotor ****
+make -j4 all 
+arm-none-eabi-gcc -o "stepmotor.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32\stepmotor\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepmotor.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepmotor.elf
+ 
+arm-none-eabi-size   stepmotor.elf 
+arm-none-eabi-objdump -h -S  stepmotor.elf  > "stepmotor.list"
+arm-none-eabi-objcopy  -O ihex  stepmotor.elf  "stepmotor.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7600	     20	   1644	   9264	   2430	stepmotor.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepmotor.list
+ 
+Finished building: stepmotor.hex
+ 
+
+11:58:04 Build Finished. 0 errors, 0 warnings. (took 443ms)
+

@@ -1,0 +1,17 @@
+/*
+ * pid.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_PID_H_
+#define COMMON_PID_H_
+
+class PIDController {
+public:
+	PIDController();
+	virtual ~PIDController();
+};
+
+#endif /* COMMON_PID_H_ */

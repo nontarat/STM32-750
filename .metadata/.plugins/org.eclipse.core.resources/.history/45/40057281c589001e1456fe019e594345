@@ -1,0 +1,17 @@
+<?php 
+
+    require_once 'config/db.php';
+
+?>
+
+<html>
+<head>
+    <title>lwIP - A Lightweight TCP/IP Stack</title>
+    <style type="text/css" id="operaUserStyle"></style>
+</head>
+<body bgcolor="white" text="black">
+
+
+
+</body>
+</html>

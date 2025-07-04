@@ -1,0 +1,22 @@
+12:05:16 **** Build of configuration Debug for project Nucleo-STM32H723ZG-SimpleETH_TCPClient ****
+make -j4 all 
+arm-none-eabi-gcc "../LWIP/App/tcp_client.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DDATA_IN_D2_SRAM -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I../LWIP/App -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/BSP/Components/lan8742 -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/compat/posix -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/net -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/compat/stdc -I../Middlewares/Third_Party/LwIP/system/arch -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"LWIP/App/tcp_client.d" -MT"LWIP/App/tcp_client.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "LWIP/App/tcp_client.o"
+../LWIP/App/tcp_client.c: In function 'tcp_write_time_msg':
+../LWIP/App/tcp_client.c:203:12: warning: variable 'Milliseconds' set but not used [-Wunused-but-set-variable]
+  203 |   uint16_t Milliseconds;
+      |            ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\Nucleo-STM32H723ZG-SimpleETH_TCPClient-master\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Nucleo-STM32H723ZG-SimpleETH_TCPClient.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf has a LOAD segment with RWX permissions
+Finished building target: Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf
+ 
+arm-none-eabi-size  Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf 
+arm-none-eabi-objdump -h -S Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf  > "Nucleo-STM32H723ZG-SimpleETH_TCPClient.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107108	    152	  21712	 128972	  1f7cc	Nucleo-STM32H723ZG-SimpleETH_TCPClient.elf
+Finished building: default.size.stdout
+ 
+Finished building: Nucleo-STM32H723ZG-SimpleETH_TCPClient.list
+ 
+
+12:05:19 Build Finished. 0 errors, 2 warnings. (took 3s.605ms)
+

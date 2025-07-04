@@ -1,0 +1,16 @@
+10:22:32 **** Incremental Build of configuration Debug for project TS_editpin_qspi ****
+make -j4 all 
+arm-none-eabi-g++ -o "TS_editpin_qspi.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m7 -T"D:\STM32\TS_editpin_qspi\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TS_editpin_qspi.map" -Wl,--gc-sections -static -L"D:\STM32\TS_editpin_qspi\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: TS_editpin_qspi.elf
+ 
+arm-none-eabi-size   TS_editpin_qspi.elf 
+arm-none-eabi-objdump -h -S  TS_editpin_qspi.elf  > "TS_editpin_qspi.list"
+   text	   data	    bss	    dec	    hex	filename
+1182204	    288	  23428	1205920	 1266a0	TS_editpin_qspi.elf
+Finished building: default.size.stdout
+ 
+Finished building: TS_editpin_qspi.list
+ 
+
+10:22:34 Build Finished. 0 errors, 0 warnings. (took 2s.151ms)
+

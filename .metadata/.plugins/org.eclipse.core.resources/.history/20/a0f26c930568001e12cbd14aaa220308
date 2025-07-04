@@ -1,0 +1,48 @@
+/*
+ * Sensor.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+#define SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+
+/**
+ *  Direction structure
+ */
+enum Direction{
+    CW      = 1,  //clockwise
+    CCW     = -1, // counter clockwise
+    UNKNOWN = 0   //not yet known or invalid state
+};
+
+
+/**
+ *  Pullup configuration structure
+ */
+enum Pullup{
+    INTERN, //!< Use internal pullups
+    EXTERN //!< Use external pullups
+};
+
+/**
+ *  Sensor abstract class definition
+ * Each sensor needs to have these functions implemented
+ */
+class Sensor {
+public:
+    virtual float getAngle() = 0;
+    virtual float getVelocity();
+
+    virtual int needsSearch();
+
+    virtual void setAngle(float);
+
+private:
+    float angle_prev = 0;
+    long velocity_calc_timestamp = 0;
+};
+
+
+#endif /* SRC_COMMON_BASE_CLASSES_SENSOR_HPP_ */

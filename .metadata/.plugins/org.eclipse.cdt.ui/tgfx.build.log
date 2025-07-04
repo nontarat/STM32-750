@@ -1,0 +1,10 @@
+09:29:53 **** Incremental Build of configuration Debug for project tgfx ****
+make -j4 all 
+arm-none-eabi-size   tgfx.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 157310	    296	  44068	 201674	  313ca	tgfx.elf
+Finished building: default.size.stdout
+ 
+
+09:29:55 Build Finished. 0 errors, 0 warnings. (took 1s.165ms)
+

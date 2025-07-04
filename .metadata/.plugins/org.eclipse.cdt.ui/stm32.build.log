@@ -1,0 +1,21 @@
+09:29:35 **** Incremental Build of configuration Debug for project stm32 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "stm32.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32\stm32\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32.elf
+ 
+arm-none-eabi-size   stm32.elf 
+arm-none-eabi-objdump -h -S  stm32.elf  > "stm32.list"
+arm-none-eabi-objcopy  -O ihex  stm32.elf  "stm32.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11288	     20	   1868	  13176	   3378	stm32.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32.hex
+ 
+Finished building: stm32.list
+ 
+
+09:29:42 Build Finished. 0 errors, 0 warnings. (took 6s.263ms)
+

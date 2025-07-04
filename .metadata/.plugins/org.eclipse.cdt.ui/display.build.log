@@ -1,0 +1,25 @@
+10:44:54 **** Incremental Build of configuration Debug for project display ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/lcd.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd.d" -MT"Core/Src/lcd.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/lcd.c:35:2: warning: initialization of 'short unsigned int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   35 |  NULL,
+      |  ^~~~
+../Core/Src/lcd.c:35:2: note: (near initialization for 'st7735_pIO.Address')
+arm-none-eabi-gcc -o "display.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\display\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="display.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: display.elf
+ 
+arm-none-eabi-size   display.elf 
+arm-none-eabi-objdump -h -S  display.elf  > "display.list"
+arm-none-eabi-objcopy  -O ihex  display.elf  "display.hex"
+   text	   data	    bss	    dec	    hex	filename
+  33184	    268	   3164	  36616	   8f08	display.elf
+Finished building: default.size.stdout
+ 
+Finished building: display.hex
+ 
+Finished building: display.list
+ 
+
+10:44:55 Build Finished. 0 errors, 1 warnings. (took 1s.155ms)
+

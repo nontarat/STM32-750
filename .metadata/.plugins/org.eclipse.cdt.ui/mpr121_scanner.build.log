@@ -1,0 +1,33 @@
+16:38:37 **** Incremental Build of configuration Debug for project mpr121_scanner ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:51:17: warning: pointer targets in initialization of 'uint8_t *' {aka 'unsigned char *'} from 'char *' differ in signedness [-Wpointer-sign]
+   51 | uint8_t *data = "Hello World from USB CDC\n";
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:31: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  117 |                       sprintf(Buffer, "0x%X", i);
+      |                               ^~~~~~
+      |                               |
+      |                               uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:254:18: note: expected 'char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  254 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+arm-none-eabi-gcc -o "mpr121_scanner.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\mpr121_scanner\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpr121_scanner.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpr121_scanner.elf
+ 
+arm-none-eabi-size   mpr121_scanner.elf 
+arm-none-eabi-objdump -h -S  mpr121_scanner.elf  > "mpr121_scanner.list"
+   text	   data	    bss	    dec	    hex	filename
+  25436	    148	   2164	  27748	   6c64	mpr121_scanner.elf
+arm-none-eabi-objcopy  -O ihex  mpr121_scanner.elf  "mpr121_scanner.hex"
+Finished building: default.size.stdout
+ 
+Finished building: mpr121_scanner.hex
+ 
+Finished building: mpr121_scanner.list
+ 
+
+16:38:38 Build Finished. 0 errors, 2 warnings. (took 1s.347ms)
+

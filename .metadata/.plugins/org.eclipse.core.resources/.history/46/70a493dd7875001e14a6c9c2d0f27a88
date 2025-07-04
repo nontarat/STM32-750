@@ -1,0 +1,19 @@
+/*
+ * SimpleFOC.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef SIMPLEFOC_H_
+#define SIMPLEFOC_H_
+
+
+#include "BLDCMotor.h"
+#include "sensors/Encoder.h"
+#include "sensors/MagneticSensorSPI.h"
+#include "motor_drivers/BLDCDriver3PWM.h"
+#include "current_sense/InlineCurrentSense.h"
+
+
+#endif /* SIMPLEFOC_H_ */

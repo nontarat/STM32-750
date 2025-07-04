@@ -1,0 +1,611 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.c
+  * @brief          : Main program body
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2023 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <stdint.h>
+#include <stdbool.h>
+#include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal_i2c.h"
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+I2C_HandleTypeDef hi2c1;
+
+/* USER CODE BEGIN PV */
+/* touch and OOR statuses */
+#define TS1		0x00
+#define TS2 		0x01
+#define OORS1 		0x02
+#define OORS2 		0x03
+
+/* filtered data */
+#define E0FDL 		0x04
+#define E0FDH 		0x05
+#define E1FDL 		0x06
+#define E1FDH 		0x07
+#define E2FDL 		0x08
+#define E2FDH 		0x09
+#define E3FDL 		0x0A
+#define E3FDH 		0x0B
+#define E4FDL 		0x0C
+#define E4FDH 		0x0D
+#define E5FDL 		0x0E
+#define E5FDH 		0x0F
+#define E6FDL 		0x10
+#define E6FDH 		0x11
+#define E7FDL 		0x12
+#define E7FDH 		0x13
+#define E8FDL 		0x14
+#define E8FDH 		0x15
+#define E9FDL 		0x16
+#define E9FDH 		0x17
+#define E10FDL 		0x18
+#define E10FDH 		0x19
+#define E11FDL 		0x1A
+#define E11FDH 		0x1B
+#define E12FDL 		0x1C
+#define E12FDH 		0x1D
+
+/* baseline values */
+#define E0BV 		0x1E
+#define E1BV 		0x1F
+#define E2BV 		0x20
+#define E3BV 		0x21
+#define E4BV 		0x22
+#define E5BV 		0x23
+#define E6BV 		0x24
+#define E7BV 		0x25
+#define E8BV 		0x26
+#define E9BV 		0x27
+#define E10BV 		0x28
+#define E11BV 		0x29
+#define E12BV 		0x2A
+
+/* general electrode touch sense baseline filters */
+/* rising filter */
+#define MHDR 		0x2B
+#define NHDR 		0x2C
+#define NCLR 		0x2D
+#define FDLR 		0x2E
+
+/* falling filter */
+#define MHDF 		0x2F
+#define NHDF 		0x30
+#define NCLF 		0x31
+#define FDLF 		0x32
+
+/* touched filter */
+#define NHDT 		0x33
+#define NCLT 		0x34
+#define FDLT 		0x35
+
+/* proximity electrode touch sense baseline filters */
+/* rising filter */
+#define MHDPROXR 	0x36
+#define NHDPROXR 	0x37
+#define NCLPROXR 	0x38
+#define FDLPROXR 	0x39
+
+/* falling filter */
+#define MHDPROXF 	0x3A
+#define NHDPROXF 	0x3B
+#define NCLPROXF 	0x3C
+#define FDLPROXF 	0x3D
+
+/* touched filter */
+#define NHDPROXT 	0x3E
+#define NCLPROXT 	0x3F
+#define FDLPROXT 	0x40
+
+/* electrode touch and release thresholds */
+#define E0TTH 		0x41
+#define E0RTH 		0x42
+#define E1TTH 		0x43
+#define E1RTH 		0x44
+#define E2TTH 		0x45
+#define E2RTH 		0x46
+#define E3TTH 		0x47
+#define E3RTH 		0x48
+#define E4TTH 		0x49
+#define E4RTH 		0x4A
+#define E5TTH 		0x4B
+#define E5RTH 		0x4C
+#define E6TTH 		0x4D
+#define E6RTH 		0x4E
+#define E7TTH 		0x4F
+#define E7RTH 		0x50
+#define E8TTH 		0x51
+#define E8RTH 		0x52
+#define E9TTH 		0x53
+#define E9RTH 		0x54
+#define E10TTH 		0x55
+#define E10RTH 		0x56
+#define E11TTH 		0x57
+#define E11RTH 		0x58
+#define E12TTH 		0x59
+#define E12RTH 		0x5A
+
+/* debounce settings */
+#define DTR 		0x5B
+
+/* configuration registers */
+#define AFE1 		0x5C
+#define AFE2 		0x5D
+#define ECR 		0x5E
+
+/* electrode currents */
+#define CDC0		0x5F
+#define CDC1 		0x60
+#define CDC2 		0x61
+#define CDC3 		0x62
+#define CDC4 		0x63
+#define CDC5 		0x64
+#define CDC6 		0x65
+#define CDC7 		0x66
+#define CDC8 		0x67
+#define CDC9 		0x68
+#define CDC10 		0x69
+#define CDC11 		0x6A
+#define CDC12 		0x6B
+
+/* electrode charge times */
+#define CDT01 		0x6C
+#define CDT23 		0x6D
+#define CDT45 		0x6E
+#define CDT67 		0x6F
+#define CDT89 		0x70
+#define CDT1011 	0x71
+#define CDT11 		0x72
+
+/* GPIO */
+#define CTL0		0x73
+#define CTL1 		0x74
+#define DAT 		0x75
+#define DIR 		0x76
+#define EN 		0x77
+#define SET 		0x78
+#define CLR 		0x79
+#define TOG 		0x7A
+
+/* auto-config */
+#define ACCR0		0x7B
+#define ACCR1		0x7C
+#define USL		0x7D
+#define LSL		0x7E
+#define TL		0x7F
+
+/* soft reset */
+#define SRST		0x80
+
+/* PWM */
+#define PWM0		0x81
+#define PWM1		0x82
+#define PWM2		0x83
+#define PWM3 		0x84
+
+#define STAR  0
+#define SEVEN 1
+#define FOUR  2
+#define ONE   3
+#define ZERO  4
+#define EIGHT 5
+#define FIVE  6
+#define TWO   7
+#define POUND 8
+#define NINE  9
+#define SIX   10
+#define THREE 11
+
+/* Number of electrodes of MPR121 */
+#define NUM_OF_ELECTRODES	13
+
+
+/* MPR121 I2C bus address */
+#define MPR121_ADDRESS_BYTE	0x5A
+
+uint8_t devError = 0;
+
+enum {
+	devOK = 0,
+	devSPI = 1,
+	devUART = 2,
+	devI2C = 4,
+	devKBD = 8,
+	devRTC = 0x10,
+	devMem = 0x20,
+	devDFP = 0x40,
+	devFifo = 0x80,
+	devBLE = 0x100
+};
+
+
+#define min_wait_ms 350
+#define max_wait_ms 1000
+
+int16_t kbdAddr;
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_I2C1_Init(void);
+static void kbdWriteRegs(uint8_t reg, uint8_t *data, size_t len);
+static void kbdReadRegs(uint8_t reg, uint8_t *data, size_t len);
+
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+void chkErrKBD(HAL_StatusTypeDef ret)
+{
+	if (ret != HAL_OK) devError |= devKBD; else devError &= ~devKBD;
+}
+
+static void kbdWriteRegs(uint8_t reg, uint8_t *data, size_t len)
+{
+	HAL_StatusTypeDef rt = HAL_I2C_Mem_Write(&hi2c1, kbdAddr << 1, reg, sizeof(reg), data, len, min_wait_ms);
+
+	chkErrKBD(rt);
+}
+
+
+/* function to read a register value from the MPR121. Returned value is not used at the moment */
+static void kbdReadRegs(uint8_t reg, uint8_t *data, size_t len)
+{
+	HAL_StatusTypeDef rt = HAL_I2C_Master_Transmit(&hi2c1, kbdAddr << 1, &reg, 1, min_wait_ms);
+	rt |= HAL_I2C_Master_Receive(&hi2c1, kbdAddr << 1, data, len, max_wait_ms);
+
+	chkErrKBD(rt);
+}
+
+uint16_t mpr121_get_touch( void )
+{
+	uint8_t data[2] = {0};
+		kbdReadRegs(TS1, data, 2);
+		uint16_t ret = data[0];
+		ret |= ((data[1] & 0x1f) << 8);
+
+		//return ret;
+		if (!ret) return ret;
+
+		int tn = 0;
+		for (int j = 0; j < NUM_OF_ELECTRODES - 1; j++) if ((ret & (1 << j))) tn++;
+
+		uint16_t key = 0;
+		if (tn == 1) {
+			     if (ret & (1 << STAR))  key = 0x2a;//'*';
+			else if (ret & (1 << SEVEN)) key = 0x37;//'7';
+			else if (ret & (1 << FOUR))  key = 0x34;//'4';
+			else if (ret & (1 << ONE))   key = 0x31;//'1';
+			else if (ret & (1 << ZERO))  key = 0x30;//'0';
+			else if (ret & (1 << EIGHT)) key = 0x38;//'8';
+			else if (ret & (1 << FIVE))  key = 0x35;//'5';
+			else if (ret & (1 << TWO))   key = 0x32;//'2';
+			else if (ret & (1 << POUND)) key = 0x23;//'#';
+			else if (ret & (1 << NINE))  key = 0x39;//'9';
+			else if (ret & (1 << SIX))   key = 0x36;//'6';
+			else if (ret & (1 << THREE)) key = 0x33;//'3';
+		}
+
+		return key;
+}
+
+/* MPR121 init */
+void mpr121_init( void )
+{
+	bool success;
+	uint8_t electrodes_count;
+  	uint8_t reg_value = 0;
+
+	success = true;
+
+	/* init port pins */
+	//pins_init();
+
+	/* init I2C interface */
+	//i2c_init();
+
+	/* soft reset */
+	kbdWriteRegs(SRST, 0x63,255);
+
+	/* read AFE Configuration 2 */
+	kbdReadRegs(AFE2, &reg_value,10);
+	/* check default value */
+	if (reg_value != 0x24) {
+		/* error */
+		success = false;
+	} else {
+		/* OK */
+	}
+
+	/* read Touch Status register */
+	read_register(TS2, &reg_value,10);
+	/* check default value */
+	if ((reg_value & 0x80) != 0) {
+		/* error */
+		success = false;
+	} else {
+		/* OK */
+	}
+
+	/* if no previous error */
+	if (success == true)
+	{
+		/* turn off all electrodes to stop */
+		write_register(ECR, 0x00);
+
+		/* write register with initial values */
+		write_register(MHDR, 0x01);
+		write_register(NHDR, 0x01);
+		write_register(NCLR, 0x10);
+		write_register(FDLR, 0x20);
+		write_register(MHDF, 0x01);
+		write_register(NHDF, 0x01);
+		write_register(NCLF, 0x10);
+		write_register(FDLF, 0x20);
+		write_register(NHDT, 0x01);
+		write_register(NCLT, 0x10);
+		write_register(FDLT, 0xFF);
+		write_register(MHDPROXR, 0x0F);
+		write_register(NHDPROXR, 0x0F);
+		write_register(NCLPROXR, 0x00);
+		write_register(FDLPROXR, 0x00);
+		write_register(MHDPROXF, 0x01);
+		write_register(NHDPROXF, 0x01);
+		write_register(NCLPROXF, 0xFF);
+		write_register(FDLPROXF, 0xFF);
+		write_register(NHDPROXT, 0x00);
+		write_register(NCLPROXT, 0x00);
+		write_register(FDLPROXT, 0x00);
+	  	write_register(DTR, 0x11);
+		write_register(AFE1, 0xFF);
+		write_register(AFE2, 0x30);
+		write_register(ACCR0, 0x00);
+		write_register(ACCR1, 0x00);
+		write_register(USL, 0x00);
+		write_register(LSL, 0x00);
+		write_register(TL, 0x00);
+		write_register(ECR, 0xCC); // default to fast baseline startup and 12 electrodes enabled, no prox
+
+		/* apply next setting for all electrodes */
+		for (electrodes_count = 0; electrodes_count < NUM_OF_ELECTRODES; electrodes_count++) {
+			write_register((E0TTH + (electrodes_count<<1)), 40);
+			write_register((E0RTH + (electrodes_count<<1)), 20);
+		}
+
+		/* enable electrodes and set the current to 16uA */
+		write_register(ECR, 0x10);
+	}
+	else
+	{
+		/* init error */
+	}
+
+	return success;
+}
+
+
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  MX_GPIO_Init();
+  MX_I2C1_Init();
+  /* USER CODE BEGIN 2 */
+  mpr121_init();
+	uint16_t touch_status_flags;
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+		touch_status_flags = mpr121_get_touch();
+
+  }
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEPredivValue = RCC_HSE_PREDIV_DIV1;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 400000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin : PA4 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
+}
+
+/* USER CODE BEGIN 4 */
+
+/* USER CODE END 4 */
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */

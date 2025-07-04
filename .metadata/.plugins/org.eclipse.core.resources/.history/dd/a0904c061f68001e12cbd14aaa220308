@@ -1,0 +1,17 @@
+/*
+ * InlineCurrentSense.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_
+#define SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_
+
+class InlineCurrentSense {
+public:
+	InlineCurrentSense();
+	virtual ~InlineCurrentSense();
+};
+
+#endif /* SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_ */

@@ -1,0 +1,22 @@
+/*
+ * mpr121.c
+ *
+ *  Created on: Jul 25, 2023
+ *      Author: user
+ */
+#include "mpr121.h"
+  if (i2c_dev) {
+    delete i2c_dev;
+  }
+  i2c_dev = new Adafruit_I2CDevice(i2caddr, theWire);
+
+  if (!i2c_dev->begin()) {
+    return false;
+  }
+  writeRegister(MPR121_SOFTRESET, 0x63);
+  delay(1);
+  for (uint8_t i = 0; i < 0x7F; i++)
+  {
+    //  Serial.print("$"); Serial.print(i, HEX);
+    //  Serial.print(": 0x"); Serial.println(readRegister8(i));
+  }

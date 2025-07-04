@@ -1,0 +1,19 @@
+13:10:44 **** Incremental Build of configuration Debug for project Inline ****
+make -j4 all 
+arm-none-eabi-g++ -o "Inline.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\Inline\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Inline.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Inline.elf
+ 
+arm-none-eabi-size   Inline.elf 
+arm-none-eabi-objdump -h -S  Inline.elf  > "Inline.list"
+arm-none-eabi-objcopy  -O ihex  Inline.elf  "Inline.hex"
+   text	   data	    bss	    dec	    hex	filename
+  54072	    112	   2928	  57112	   df18	Inline.elf
+Finished building: default.size.stdout
+ 
+Finished building: Inline.list
+ 
+Finished building: Inline.hex
+ 
+
+13:10:50 Build Finished. 0 errors, 0 warnings. (took 5s.645ms)
+

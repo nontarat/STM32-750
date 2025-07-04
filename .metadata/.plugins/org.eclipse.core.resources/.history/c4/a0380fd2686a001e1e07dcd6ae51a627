@@ -1,0 +1,20 @@
+/*
+ * BLDCDriver3PWM.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+#define SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+#include "../common/base_classes/BLDCDriver.h"
+#include "../common/foc_utils.h"
+#include "../common/time_utils.h"
+#include "../common/defaults.h"
+class BLDCDriver3PWM: public BLDCDriver {
+public:
+	BLDCDriver3PWM();
+	virtual ~BLDCDriver3PWM();
+};
+
+#endif /* SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_ */

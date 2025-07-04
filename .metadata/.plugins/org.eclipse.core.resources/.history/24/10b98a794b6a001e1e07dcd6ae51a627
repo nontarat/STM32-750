@@ -1,0 +1,29 @@
+/*
+ * lowpassfilter.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_LOWPASSFILTER_H_
+#define SRC_COMMON_LOWPASSFILTER_H_
+
+#include "time_utils.h"
+#include "foc_utils.h"
+
+class lowpass_filter {
+public:
+	   /**
+	     * @param Tf - Low pass filter time constant
+	     */
+	lowpass_filter(float Tf);
+	virtual ~lowpass_filter();
+    float operator() (float x);
+    float Tf; //!< Low pass filter time constant
+
+protected:
+    unsigned long timestamp_prev;  //!< Last execution timestamp
+    float y_prev; //!< filtered value in previous execution step
+};
+
+#endif /* SRC_COMMON_LOWPASSFILTER_H_ */

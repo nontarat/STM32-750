@@ -1,0 +1,19 @@
+10:24:18 **** Incremental Build of configuration Debug for project gimball ****
+make -j4 all 
+arm-none-eabi-g++ -o "gimball.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\gimball\STM32H750VBTX_FLASH.ld" -Wl,-Map="gimball.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: gimball.elf
+ 
+arm-none-eabi-size   gimball.elf 
+arm-none-eabi-objdump -h -S  gimball.elf  > "gimball.list"
+arm-none-eabi-objcopy  -O ihex  gimball.elf  "gimball.hex"
+   text	   data	    bss	    dec	    hex	filename
+  37040	    112	   2560	  39712	   9b20	gimball.elf
+Finished building: default.size.stdout
+ 
+Finished building: gimball.list
+ 
+Finished building: gimball.hex
+ 
+
+10:24:20 Build Finished. 0 errors, 0 warnings. (took 1s.295ms)
+

@@ -1,0 +1,15 @@
+/*
+ * tcp_client.h
+ *
+ *  Created on: Mar 4, 2024
+ *      Author: user
+ */
+
+#ifndef INC_TCP_CLIENT_H_
+#define INC_TCP_CLIENT_H_
+
+#include <lwip/ip_addr.h>
+
+int TCPclientStart(uint16_t port);
+
+#endif /* INC_TCP_CLIENT_H_ */

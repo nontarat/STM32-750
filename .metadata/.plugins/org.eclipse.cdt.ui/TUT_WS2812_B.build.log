@@ -1,0 +1,10 @@
+14:21:38 **** Build of configuration Debug for project TUT_WS2812_B ****
+make -j4 all 
+arm-none-eabi-size   TUT_WS2812_B.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17816	     20	   2260	  20096	   4e80	TUT_WS2812_B.elf
+Finished building: default.size.stdout
+ 
+
+14:21:38 Build Finished. 0 errors, 0 warnings. (took 235ms)
+

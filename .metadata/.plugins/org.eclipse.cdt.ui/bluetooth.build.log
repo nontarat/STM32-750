@@ -1,0 +1,10 @@
+17:05:12 **** Incremental Build of configuration Debug for project bluetooth ****
+make -j4 all 
+arm-none-eabi-size  bluetooth.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27768	     32	   1864	  29664	   73e0	bluetooth.elf
+Finished building: default.size.stdout
+ 
+
+17:05:12 Build Finished. 0 errors, 0 warnings. (took 257ms)
+

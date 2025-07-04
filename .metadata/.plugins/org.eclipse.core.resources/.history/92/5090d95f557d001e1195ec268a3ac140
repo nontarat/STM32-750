@@ -1,0 +1,100 @@
+/*
+ * sPWM.c
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+#include "sPWM.h"
+#include "main.h"
+#include "stm32f1xx_hal.h"
+uint32_t const FCPU = 64000000;
+//uint16_t const MAX16BIT = 65535;
+
+void EN_VFD(eSwitch_Type _status)
+{
+	switch (_status)
+	{
+	case ON  :
+	{
+		HAL_GPIO_WritePin(EN_VFD_GPIO_Port, EN_VFD_Pin, GPIO_PIN_SET);
+		//GPIOA->ODR |= (1U<<15);
+	}
+	break;
+	case OFF :
+	{
+		HAL_GPIO_WritePin(EN_VFD_GPIO_Port, EN_VFD_Pin, GPIO_PIN_RESET);
+		//GPIOA->ODR &= ~(1U<<15);
+
+	}
+	break;
+
+	}
+}
+void GenFreq(Freq_HandleTypeDef  * const me,eFreq_Type _Freq)
+{
+	me->Prescaler = 1;
+	me->Period = (FCPU / _Freq) / 2;
+	me->Pulse = me->Period / 2;
+}
+
+void DelayMs(uint32_t ms)
+{
+    uint32_t ticks = HAL_GetTick() + ms;
+    while (HAL_GetTick() < ticks) {
+           // Your STM32-specific code here to keep the system running
+       }
+}
+// Microsecond delay
+void delay_us(uint32_t us) {
+  uint32_t start = HAL_GetTick();
+  while ((HAL_GetTick() - start) < (us / 1000));
+}
+
+void RunPureSine_Mode(void)
+{
+	for(int i =0; i <5 ;i++)
+	{
+
+	}
+	//PureSine(ON,50,80,10);
+	while(1)
+	{
+		HAL_GPIO_TogglePin(LD_Onboard_GPIO_Port, LD_Onboard_Pin)
+		HAL_Delay(500);
+	}
+}
+static void PureSine(eSwitch_Type _status, uint8_t _freq, uint32_t _delay,uint8_t _old_freq)
+{
+	switch (_status)
+	{
+	case ON:
+	{
+		//single_phase = true;
+		single_phase = false;
+		freq = _freq;
+		Check_MinMax();
+		Cal_VFD();
+		EN_VFD(ON);
+		old_freq = _old_freq; //start at 10Hz
+		if((freq > old_freq)&(freq >10))
+		{
+			for(temp = old_freq;temp <= freq;temp++)
+			{
+				Cal_VFD();
+				DelayMs(_delay);
+			}
+		}
+
+	}
+	break;
+	case OFF:
+	{
+		EN_VFD(OFF);
+	}
+
+	}
+}
+static void Check_MINMAX(void)
+{
+
+}

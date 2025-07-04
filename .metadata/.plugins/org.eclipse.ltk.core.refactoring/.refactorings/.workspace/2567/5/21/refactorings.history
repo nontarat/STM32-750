@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Nucleo-STM32H723ZG-SimpleETH_TCPClient&apos;" deleteContents="false" description="Delete resource &apos;Nucleo-STM32H723ZG-SimpleETH_TCPClient&apos;" element1="/Nucleo-STM32H723ZG-SimpleETH_TCPClient" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1716543333124"/>
+</session>

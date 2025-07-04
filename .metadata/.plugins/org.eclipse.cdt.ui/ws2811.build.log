@@ -1,0 +1,10 @@
+17:03:50 **** Incremental Build of configuration Debug for project ws2811 ****
+make -j4 all 
+arm-none-eabi-size   ws2811.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10540	     20	   9004	  19564	   4c6c	ws2811.elf
+Finished building: default.size.stdout
+ 
+
+17:03:50 Build Finished. 0 errors, 0 warnings. (took 168ms)
+

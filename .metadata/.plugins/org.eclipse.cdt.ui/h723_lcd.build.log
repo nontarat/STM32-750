@@ -1,0 +1,10 @@
+11:55:54 **** Incremental Build of configuration Debug for project h723_lcd ****
+make -j4 all 
+arm-none-eabi-size  h723_lcd.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19816	     80	   1768	  21664	   54a0	h723_lcd.elf
+Finished building: default.size.stdout
+ 
+
+11:55:54 Build Finished. 0 errors, 0 warnings. (took 266ms)
+

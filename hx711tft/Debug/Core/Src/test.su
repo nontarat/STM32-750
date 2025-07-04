@@ -1,0 +1,12 @@
+../Core/Src/test.c:26:6:get_time	4	static
+../Core/Src/test.c:45:6:DrawTestPage	32	static
+../Core/Src/test.c:66:6:main_test	24	static
+../Core/Src/test.c:84:6:Test_Color	24	static
+../Core/Src/test.c:107:6:Test_FillRec	32	static
+../Core/Src/test.c:137:6:Test_Circle	24	static
+../Core/Src/test.c:158:6:English_Font_test	24	static
+../Core/Src/test.c:180:6:Test_Triangle	40	static
+../Core/Src/test.c:207:6:Chinese_Font_test	24	static
+../Core/Src/test.c:224:6:Pic_test	24	static
+../Core/Src/test.c:244:6:Rotate_Test	56	static
+../Core/Src/test.c:267:6:Touch_Test	32	static

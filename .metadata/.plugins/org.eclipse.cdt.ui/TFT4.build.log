@@ -1,0 +1,24 @@
+14:57:35 **** Incremental Build of configuration Debug for project TFT4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:104:3: warning: implicit declaration of function 'Cache_Enable' [-Wimplicit-function-declaration]
+  104 |   Cache_Enable();
+      |   ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "TFT4.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\TFT4\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TFT4.elf
+ 
+arm-none-eabi-size   TFT4.elf 
+arm-none-eabi-objdump -h -S  TFT4.elf  > "TFT4.list"
+arm-none-eabi-objcopy  -O ihex  TFT4.elf  "TFT4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  31312	     36	   1948	  33296	   8210	TFT4.elf
+Finished building: default.size.stdout
+ 
+Finished building: TFT4.hex
+ 
+Finished building: TFT4.list
+ 
+
+14:57:36 Build Finished. 0 errors, 1 warnings. (took 985ms)
+

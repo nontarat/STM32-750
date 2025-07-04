@@ -1,0 +1,10 @@
+09:57:10 **** Build of configuration Debug for project w25qxx ****
+make -j4 all 
+arm-none-eabi-size   w25qxx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  96024	    616	  24776	 121416	  1da48	w25qxx.elf
+Finished building: default.size.stdout
+ 
+
+09:57:10 Build Finished. 0 errors, 0 warnings. (took 679ms)
+

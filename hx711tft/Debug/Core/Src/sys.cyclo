@@ -1,0 +1,4 @@
+sys.c:4:6:Cache_Enable	5
+sys.c:37:6:Stm32_Clock_Init	4
+sys.c:102:4:Get_ICahceSta	1
+sys.c:111:4:Get_DCahceSta	1

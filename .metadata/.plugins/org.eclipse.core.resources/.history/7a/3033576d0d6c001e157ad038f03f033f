@@ -1,0 +1,5 @@
+build/MINGW32_NT-6.2/generated/images/src/Oven_UI/Power/image_Oven_power_bg_clean.o: \
+ generated/images/src/Oven_UI/Power/image_Oven_power_bg_clean.cpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:

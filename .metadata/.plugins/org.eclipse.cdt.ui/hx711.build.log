@@ -1,0 +1,10 @@
+09:57:04 **** Build of configuration Debug for project hx711 ****
+make -j4 all 
+arm-none-eabi-size   hx711.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43776	    124	   3148	  47048	   b7c8	hx711.elf
+Finished building: default.size.stdout
+ 
+
+09:57:05 Build Finished. 0 errors, 0 warnings. (took 865ms)
+

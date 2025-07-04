@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BP_odrive_uart/Core/Inc/odrivestm32&apos; to &apos;odrivestm32.h&apos;" description="Rename resource &apos;odrivestm32&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/odrivestm32" name="odrivestm32.h" stamp="1684488270418" updateReferences="true"/>
+</session>

@@ -1,0 +1,28 @@
+/*
+ * time_utils.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+
+#include "time_utils.h"
+
+// function buffering delay()
+// arduino uno function doesn't work well with interrupts
+void _delay(unsigned long ms){
+
+  // regular micros
+  delay(ms);
+
+}
+
+
+// function buffering _micros()
+// arduino function doesn't work well with interrupts
+unsigned long _micros(){
+
+  // regular micros
+  return micros();
+
+}

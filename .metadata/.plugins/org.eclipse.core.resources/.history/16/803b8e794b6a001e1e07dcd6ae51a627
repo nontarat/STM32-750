@@ -1,0 +1,31 @@
+/*
+ * time_utils.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_TIME_UTILS_H_
+#define SRC_COMMON_TIME_UTILS_H_
+
+
+#include "foc_utils.h"
+
+#include "stm32h7xx_hal.h"
+
+/**
+ * Function implementing delay() function in milliseconds
+ * - blocking function
+ * - hardware specific
+
+ * @param ms number of milliseconds to wait
+ */
+void _delay(unsigned long ms);
+
+/**
+ * Function implementing timestamp getting function in microseconds
+ * hardware specific
+ */
+unsigned long _micros();
+
+#endif /* SRC_COMMON_TIME_UTILS_H_ */

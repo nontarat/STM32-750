@@ -1,0 +1,27 @@
+/*
+ * mpr121.c
+ *
+ *  Created on: Jul 25, 2023
+ *      Author: user
+ */
+#include "mpr121.h"
+
+/* ------------- Local defines --------------- */
+
+/* Uncomment this define to enable MPR121 IRQ interrupt */
+//#define MPR121_INT_ENABLED
+
+
+/* Number of electrodes of MPR121 */
+#define NUM_OF_ELECTRODES	13
+
+
+/* MPR121 I2C bus address */
+#define MPR121_ADDRESS_BYTE	0x5A
+
+
+static bool write_register(uint8_t reg_addr, uint8_t value)
+{
+
+}
+

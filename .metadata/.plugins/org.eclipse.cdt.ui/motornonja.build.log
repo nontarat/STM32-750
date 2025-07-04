@@ -1,0 +1,28 @@
+15:21:29 **** Incremental Build of configuration Debug for project motornonja ****
+make -j4 all 
+arm-none-eabi-g++ "../Core/Src/motor_drivers/BLDCDriver3PWM.cpp" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/motor_drivers/BLDCDriver3PWM.d" -MT"Core/Src/motor_drivers/BLDCDriver3PWM.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/motor_drivers/BLDCDriver3PWM.o"
+In file included from ../Core/Src/motor_drivers/BLDCDriver3PWM.h:10,
+                 from ../Core/Src/motor_drivers/BLDCDriver3PWM.cpp:8:
+../Core/Src/motor_drivers/../common/base_classes/BLDCDriver.h: In member function 'virtual int BLDCDriver::init()':
+../Core/Src/motor_drivers/../common/base_classes/BLDCDriver.h:16:24: warning: no return statement in function returning non-void [-Wreturn-type]
+   16 |     virtual int init(){};
+      |                        ^
+In file included from ../Core/Src/motor_drivers/BLDCDriver3PWM.cpp:8:
+../Core/Src/motor_drivers/BLDCDriver3PWM.h: In member function 'virtual int BLDCDriver3PWM::init()':
+../Core/Src/motor_drivers/BLDCDriver3PWM.h:18:21: warning: no return statement in function returning non-void [-Wreturn-type]
+   18 |         int init() {};
+      |                     ^
+arm-none-eabi-g++ -o "motornonja.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\motornonja\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="motornonja.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: motornonja.elf
+ 
+arm-none-eabi-size   motornonja.elf 
+arm-none-eabi-objdump -h -S  motornonja.elf  > "motornonja.list"
+   text	   data	    bss	    dec	    hex	filename
+  13532	     24	   1720	  15276	   3bac	motornonja.elf
+Finished building: default.size.stdout
+ 
+Finished building: motornonja.list
+ 
+
+15:21:30 Build Finished. 0 errors, 2 warnings. (took 1s.20ms)
+

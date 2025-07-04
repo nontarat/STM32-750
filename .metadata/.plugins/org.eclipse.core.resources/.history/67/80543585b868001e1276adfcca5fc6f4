@@ -1,0 +1,17 @@
+/*
+ * lowpass_filter.h
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_LOWPASS_FILTER_H_
+#define SRC_COMMON_LOWPASS_FILTER_H_
+
+class LowPassFilter {
+public:
+	LowPassFilter();
+	virtual ~LowPassFilter();
+};
+
+#endif /* SRC_COMMON_LOWPASS_FILTER_H_ */

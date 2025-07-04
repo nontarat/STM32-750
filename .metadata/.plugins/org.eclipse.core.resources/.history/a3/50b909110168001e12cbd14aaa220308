@@ -1,0 +1,13 @@
+/*
+ * BLDCDriver.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_BLDCDRIVER_HPP_
+#define SRC_COMMON_BASE_CLASSES_BLDCDRIVER_HPP_
+
+
+
+#endif /* SRC_COMMON_BASE_CLASSES_BLDCDRIVER_HPP_ */

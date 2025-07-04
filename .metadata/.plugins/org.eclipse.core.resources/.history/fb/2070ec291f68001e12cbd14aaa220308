@@ -1,0 +1,28 @@
+/*
+ * InlineCurrentSense.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#include "InlineCurrentSense.hpp"
+#include "InlineCurrentSense.hpp"
+#include "math.h"
+#include "main.h"
+InlineCurrentSense::InlineCurrentSense(float _shunt_resistor, float _gain, int _pinA, int _pinB, int _pinC){
+    pinA = _pinA;
+    pinB = _pinB;
+    pinC = _pinC;
+
+    shunt_resistor = _shunt_resistor;
+    amp_gain  = _gain;
+    volts_to_amps_ratio = 1.0 /_shunt_resistor / _gain; // volts to amps
+    // gains for each phase
+    gain_a = volts_to_amps_ratio;
+    gain_b = volts_to_amps_ratio;
+    gain_c = volts_to_amps_ratio;
+}
+InlineCurrentSense::~InlineCurrentSense() {
+	// TODO Auto-generated destructor stub
+}
+

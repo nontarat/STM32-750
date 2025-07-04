@@ -1,0 +1,10 @@
+09:38:29 **** Incremental Build of configuration Debug for project mem_flash ****
+make -j4 all 
+arm-none-eabi-size   mem_flash.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8748	     72	   1848	  10668	   29ac	mem_flash.elf
+Finished building: default.size.stdout
+ 
+
+09:38:29 Build Finished. 0 errors, 0 warnings. (took 309ms)
+

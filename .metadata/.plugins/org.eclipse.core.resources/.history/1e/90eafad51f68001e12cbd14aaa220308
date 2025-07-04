@@ -1,0 +1,30 @@
+/*
+ * BLDCDriver3PWM.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#include "BLDCDriver3PWM.hpp"
+#include "main.h"
+BLDCDriver3PWM::BLDCDriver3PWM(int phA, int phB, int phC, int en1) {//, int en2, int en3){
+  // Pin initialization
+  pwmA = phA;
+  pwmB = phB;
+  pwmC = phC;
+
+  // enable_pin pin
+  enableA_pin = en1;
+//  enableB_pin = en2;
+//  enableC_pin = en3;
+
+  // default power-supply value
+  voltage_power_supply = DEF_POWER_SUPPLY;
+  voltage_limit = NOT_SET;
+
+}
+
+BLDCDriver3PWM::~BLDCDriver3PWM() {
+	// TODO Auto-generated destructor stub
+}
+

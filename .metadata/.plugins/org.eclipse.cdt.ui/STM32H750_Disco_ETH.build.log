@@ -1,0 +1,10 @@
+11:49:51 **** Incremental Build of configuration Debug for project STM32H750_Disco_ETH ****
+make -j4 all 
+arm-none-eabi-size  STM32H750_Disco_ETH.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 130704	    156	 352063	 482923	  75e6b	STM32H750_Disco_ETH.elf
+Finished building: default.size.stdout
+ 
+
+11:49:52 Build Finished. 0 errors, 0 warnings. (took 542ms)
+

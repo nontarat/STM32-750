@@ -1,0 +1,19 @@
+15:00:44 **** Incremental Build of configuration Debug for project drv8313 ****
+make -j4 all 
+arm-none-eabi-gcc -o "drv8313.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\drv8313\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drv8313.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: drv8313.elf
+ 
+arm-none-eabi-size   drv8313.elf 
+arm-none-eabi-objdump -h -S  drv8313.elf  > "drv8313.list"
+arm-none-eabi-objcopy  -O ihex  drv8313.elf  "drv8313.hex"
+   text	   data	    bss	    dec	    hex	filename
+  23136	    828	   1844	  25808	   64d0	drv8313.elf
+Finished building: default.size.stdout
+ 
+Finished building: drv8313.hex
+Finished building: drv8313.list
+ 
+ 
+
+15:00:45 Build Finished. 0 errors, 0 warnings. (took 911ms)
+

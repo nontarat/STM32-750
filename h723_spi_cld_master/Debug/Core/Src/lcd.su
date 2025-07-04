@@ -1,0 +1,10 @@
+../Core/Src/lcd.c:13:6:lcd_init	8	static
+../Core/Src/lcd.c:34:6:lcd_send_cmd	16	static
+../Core/Src/lcd.c:39:6:lcd_send_data	16	static
+../Core/Src/lcd.c:44:6:lcd_send_string	16	static
+../Core/Src/lcd.c:49:6:lcd_send_to_lcd	16	static
+../Core/Src/lcd.c:77:6:lcd_set_cursor	24	static
+../Core/Src/lcd.c:94:6:lcd_clear	8	static
+../Core/Src/lcd.c:98:6:lcd_scroll_left	48	static
+../Core/Src/lcd.c:122:6:lcd_scroll_right	48	static
+../Core/Src/lcd.c:146:6:lcd_appear_one_by_one	16	static

@@ -1,0 +1,17 @@
+/*
+ * BLDCDriver.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_BASE_CLASSES_BLDCDRIVER_H_
+#define COMMON_BASE_CLASSES_BLDCDRIVER_H_
+
+class BLDCDriver {
+public:
+	BLDCDriver();
+	virtual ~BLDCDriver();
+};
+
+#endif /* COMMON_BASE_CLASSES_BLDCDRIVER_H_ */

@@ -1,0 +1,19 @@
+14:19:42 **** Incremental Build of configuration Debug for project flash_memory ****
+make -j4 all 
+arm-none-eabi-gcc -o "flash_memory.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\STM32\flash_memory\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="flash_memory.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: flash_memory.elf
+ 
+arm-none-eabi-size  flash_memory.elf 
+arm-none-eabi-objdump -h -S flash_memory.elf  > "flash_memory.list"
+arm-none-eabi-objcopy  -O ihex flash_memory.elf  "flash_memory.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7080	     60	   1848	   8988	   231c	flash_memory.elf
+Finished building: default.size.stdout
+ 
+Finished building: flash_memory.hex
+Finished building: flash_memory.list
+ 
+ 
+
+14:19:42 Build Finished. 0 errors, 0 warnings. (took 294ms)
+

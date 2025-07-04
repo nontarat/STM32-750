@@ -1,0 +1,36 @@
+/*
+ * BLDCDriver.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_BLDCDRIVER_H_
+#define SRC_COMMON_BASE_CLASSES_BLDCDRIVER_H_
+
+class BLDCDriver {
+public:
+	BLDCDriver();
+	virtual ~BLDCDriver();
+    /** Initialise hardware */
+    virtual int init(){};
+    /** Enable hardware */
+    virtual void enable(){};
+    /** Disable hardware */
+    virtual void disable(){};
+
+    long pwm_frequency; //!< pwm frequency value in hertz
+    float voltage_power_supply; //!< power supply voltage
+    float voltage_limit; //!< limiting voltage set to the motor
+
+    /**
+     * Set phase voltages to the harware
+     *
+     * @param Ua - phase A voltage
+     * @param Ub - phase B voltage
+     * @param Uc - phase C voltage
+    */
+    virtual void setPwm(float Ua, float Ub, float Uc){};
+};
+
+#endif /* SRC_COMMON_BASE_CLASSES_BLDCDRIVER_H_ */

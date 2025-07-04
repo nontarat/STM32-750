@@ -1,0 +1,18 @@
+/*
+ * MagneticSensorSPI.cpp
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#include "MagneticSensorSPI.h"
+
+MagneticSensorSPI::MagneticSensorSPI() {
+	// TODO Auto-generated constructor stub
+
+}
+
+MagneticSensorSPI::~MagneticSensorSPI() {
+	// TODO Auto-generated destructor stub
+}
+

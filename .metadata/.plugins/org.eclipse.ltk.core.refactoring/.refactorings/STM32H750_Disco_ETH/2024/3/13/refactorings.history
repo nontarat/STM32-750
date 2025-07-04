@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32H750_Disco_ETH/LWIP/App/tcl_client.h&apos; to &apos;tcp_client.h&apos;" description="Rename resource &apos;tcl_client.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="LWIP/App/tcl_client.h" name="tcp_client.h" stamp="1711695947641" updateReferences="true"/>
+</session>

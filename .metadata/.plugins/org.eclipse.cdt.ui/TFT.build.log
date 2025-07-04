@@ -1,0 +1,21 @@
+11:12:00 **** Incremental Build of configuration Debug for project TFT ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "TFT.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\TFT\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TFT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TFT.elf
+ 
+arm-none-eabi-size   TFT.elf 
+arm-none-eabi-objdump -h -S  TFT.elf  > "TFT.list"
+arm-none-eabi-objcopy  -O ihex  TFT.elf  "TFT.hex"
+   text	   data	    bss	    dec	    hex	filename
+  34232	    268	   3164	  37664	   9320	TFT.elf
+Finished building: default.size.stdout
+ 
+Finished building: TFT.hex
+ 
+Finished building: TFT.list
+ 
+
+11:12:01 Build Finished. 0 errors, 0 warnings. (took 1s.618ms)
+

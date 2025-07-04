@@ -1,0 +1,19 @@
+/*
+ * BLDCMotor.hpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_BLDCMOTOR_HPP_
+#define SRC_BLDCMOTOR_HPP_
+
+#include "common/base_classes/FOCMotor.hpp"
+
+class BLDCMotor: public FOCMotor {
+public:
+	BLDCMotor();
+	virtual ~BLDCMotor();
+};
+
+#endif /* SRC_BLDCMOTOR_HPP_ */

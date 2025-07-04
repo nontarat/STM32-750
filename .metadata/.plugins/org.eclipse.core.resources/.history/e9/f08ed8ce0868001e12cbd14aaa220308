@@ -1,0 +1,18 @@
+/*
+ * CurrentSense.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#include "CurrentSense.hpp"
+
+CurrentSense::CurrentSense() {
+	// TODO Auto-generated constructor stub
+
+}
+
+CurrentSense::~CurrentSense() {
+	// TODO Auto-generated destructor stub
+}
+

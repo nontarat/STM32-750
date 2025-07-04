@@ -1,0 +1,17 @@
+/*
+ * focutils.h
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_FOCUTILS_H_
+#define SRC_COMMON_FOCUTILS_H_
+
+class foc_utils {
+public:
+	foc_utils();
+	virtual ~foc_utils();
+};
+
+#endif /* SRC_COMMON_FOCUTILS_H_ */

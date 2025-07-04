@@ -1,0 +1,38 @@
+/*
+ * sPWM.c
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+#include "sPWM.h"
+#include "main.h"
+#include "stm32f1xx_hal.h"
+uint32_t const FCPU = 64000000;
+uint16_t const MAX16BIT = 65535;
+
+void EN_VFD(eSwitch_Type _status)
+{
+	switch (_status)
+	{
+	case ON  :
+	{
+		HAL_GPIO_WritePin(EN_VFD_GPIO_Port, EN_VFD_Pin, GPIO_PIN_SET);
+		//GPIOA->ODR |= (1U<<15);
+	}
+	break;
+	case OFF :
+	{
+		HAL_GPIO_WritePin(EN_VFD_GPIO_Port, EN_VFD_Pin, GPIO_PIN_RESET);
+		//GPIOA->ODR &= ~(1U<<15);
+
+	}
+	break;
+
+	}
+}
+void GenFreq(Freq_HandleTypeDef  * const me,eFreq_Type _Freq)
+{
+
+}
+
+

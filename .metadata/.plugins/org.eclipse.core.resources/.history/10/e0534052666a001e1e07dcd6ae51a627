@@ -1,0 +1,17 @@
+/*
+ * BLDCDriver3PWM.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+#define SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+
+class BLDCDriver3PWM: private virtual BLDCDriver {
+public:
+	BLDCDriver3PWM();
+	virtual ~BLDCDriver3PWM();
+};
+
+#endif /* SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_ */

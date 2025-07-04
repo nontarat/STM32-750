@@ -1,0 +1,10 @@
+14:21:38 **** Build of configuration Debug for project bldc_odrive ****
+make -j4 all 
+arm-none-eabi-size   bldc_odrive.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37008	     24	   1872	  38904	   97f8	bldc_odrive.elf
+Finished building: default.size.stdout
+ 
+
+14:21:38 Build Finished. 0 errors, 0 warnings. (took 354ms)
+

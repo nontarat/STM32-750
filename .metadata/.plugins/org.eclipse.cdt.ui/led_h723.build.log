@@ -1,0 +1,10 @@
+09:46:39 **** Build of configuration Debug for project led_h723 ****
+make -j4 all 
+arm-none-eabi-size  led_h723.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24460	     16	   2288	  26764	   688c	led_h723.elf
+Finished building: default.size.stdout
+ 
+
+09:46:39 Build Finished. 0 errors, 0 warnings. (took 312ms)
+

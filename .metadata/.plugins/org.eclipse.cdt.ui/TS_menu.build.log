@@ -1,0 +1,10 @@
+14:21:37 **** Build of configuration Debug for project TS_menu ****
+make -j4 all 
+arm-none-eabi-size   TS_menu.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35428	     32	  10152	  45612	   b22c	TS_menu.elf
+Finished building: default.size.stdout
+ 
+
+14:21:38 Build Finished. 0 errors, 0 warnings. (took 425ms)
+

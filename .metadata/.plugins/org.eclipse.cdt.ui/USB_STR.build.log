@@ -1,0 +1,10 @@
+11:14:51 **** Incremental Build of configuration Debug for project USB_STR ****
+make -j4 all 
+arm-none-eabi-size   USB_STR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52712	    452	  23500	  76664	  12b78	USB_STR.elf
+Finished building: default.size.stdout
+ 
+
+11:14:52 Build Finished. 0 errors, 0 warnings. (took 415ms)
+

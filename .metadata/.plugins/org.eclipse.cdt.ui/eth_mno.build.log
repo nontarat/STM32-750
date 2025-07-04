@@ -1,0 +1,10 @@
+11:30:00 **** Incremental Build of configuration Debug for project eth_mno ****
+make -j4 all 
+arm-none-eabi-size   eth_mno.elf 
+   text	   data	    bss	    dec	    hex	filename
+  98196	    152	 141312	 239660	  3a82c	eth_mno.elf
+Finished building: default.size.stdout
+ 
+
+11:30:02 Build Finished. 0 errors, 0 warnings. (took 1s.270ms)
+

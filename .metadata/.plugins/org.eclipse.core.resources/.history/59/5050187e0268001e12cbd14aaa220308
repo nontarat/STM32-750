@@ -1,0 +1,13 @@
+/*
+ * Encoder.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SENSORS_ENCODER_HPP_
+#define SRC_SENSORS_ENCODER_HPP_
+
+
+
+#endif /* SRC_SENSORS_ENCODER_HPP_ */

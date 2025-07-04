@@ -1,0 +1,57 @@
+17:06:53 **** Incremental Build of configuration Debug for project RCC ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sPWM.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sPWM.d" -MT"Core/Src/sPWM.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sPWM.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+../Core/Src/sPWM.c: In function 'RunPureSine_Mode':
+../Core/Src/sPWM.c:62:73: error: expected ';' before 'HAL_Delay'
+   62 |                 HAL_GPIO_TogglePin(LD_Onboard_GPIO_Port, LD_Onboard_Pin)
+      |                                                                         ^
+      |                                                                         ;
+   63 |                 HAL_Delay(500);
+      |                 ~~~~~~~~~                                                
+../Core/Src/sPWM.c: In function 'PureSine':
+../Core/Src/sPWM.c:68:17: error: switch quantity not an integer
+   68 |         switch (_status)
+      |                 ^~~~~~~
+../Core/Src/sPWM.c:73:17: error: 'single_phase' undeclared (first use in this function)
+   73 |                 single_phase = false;
+      |                 ^~~~~~~~~~~~
+../Core/Src/sPWM.c:73:17: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/sPWM.c:73:32: error: 'false' undeclared (first use in this function)
+   73 |                 single_phase = false;
+      |                                ^~~~~
+../Core/Src/sPWM.c:9:1: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+    8 | #include "main.h"
+  +++ |+#include <stdbool.h>
+    9 | #include "stm32f1xx_hal.h"
+../Core/Src/sPWM.c:74:17: error: 'freq' undeclared (first use in this function); did you mean '_freq'?
+   74 |                 freq = _freq;
+      |                 ^~~~
+      |                 _freq
+../Core/Src/sPWM.c:75:17: warning: implicit declaration of function 'Check_MinMax' [-Wimplicit-function-declaration]
+   75 |                 Check_MinMax();
+      |                 ^~~~~~~~~~~~
+../Core/Src/sPWM.c:76:17: warning: implicit declaration of function 'Cal_VFD' [-Wimplicit-function-declaration]
+   76 |                 Cal_VFD();
+      |                 ^~~~~~~
+../Core/Src/sPWM.c:78:17: error: 'old_freq' undeclared (first use in this function); did you mean '_old_freq'?
+   78 |                 old_freq = _old_freq; //start at 10Hz
+      |                 ^~~~~~~~
+      |                 _old_freq
+../Core/Src/sPWM.c:81:29: error: 'temp' undeclared (first use in this function)
+   81 |                         for(temp = old_freq;temp <= freq;temp++)
+      |                             ^~~~
+At top level:
+../Core/Src/sPWM.c:97:13: warning: 'Check_MINMAX' defined but not used [-Wunused-function]
+   97 | static void Check_MINMAX(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/sPWM.c:66:13: warning: 'PureSine' defined but not used [-Wunused-function]
+   66 | static void PureSine(Status_Type _status, uint8_t _freq, uint32_t _delay,uint8_t _old_freq)
+      |             ^~~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/sPWM.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+17:06:53 Build Failed. 9 errors, 4 warnings. (took 666ms)
+

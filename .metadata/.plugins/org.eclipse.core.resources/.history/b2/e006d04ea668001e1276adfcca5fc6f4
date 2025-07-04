@@ -1,0 +1,17 @@
+/*
+ * MagneticSensorSPI.hpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SENSOR_MAGNETICSENSORSPI_HPP_
+#define SRC_SENSOR_MAGNETICSENSORSPI_HPP_
+
+class MagneticSensorSPI: public Sensor {
+public:
+	MagneticSensorSPI();
+	virtual ~MagneticSensorSPI();
+};
+
+#endif /* SRC_SENSOR_MAGNETICSENSORSPI_HPP_ */

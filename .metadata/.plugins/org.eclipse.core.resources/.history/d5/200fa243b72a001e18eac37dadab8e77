@@ -1,0 +1,15 @@
+/*
+ * mpr121.h
+ *
+ *  Created on: Jul 25, 2023
+ *      Author: user
+ */
+
+#ifndef INC_MPR121_H_
+#define INC_MPR121_H_
+#include "mpr121_def.h"
+
+static bool write_register(uint8_t, uint8_t);
+static bool read_register(uint8_t, uint8_t *);
+
+#endif /* INC_MPR121_H_ */

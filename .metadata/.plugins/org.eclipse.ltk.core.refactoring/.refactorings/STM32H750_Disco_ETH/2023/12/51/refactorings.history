@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;STM32H750_Disco_ETH/Core/Inc/http_non.g&apos; to &apos;http_non.h&apos;" description="Rename resource &apos;http_non.g&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/http_non.g" name="http_non.h" stamp="1703304299900" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;STM32H750_Disco_ETH/Core/Inc/http_non.h&apos; to &apos;http_cgi.h&apos;" description="Rename resource &apos;http_non.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/http_non.h" name="http_cgi.h" stamp="1703304359360" updateReferences="true"/>
+</session>

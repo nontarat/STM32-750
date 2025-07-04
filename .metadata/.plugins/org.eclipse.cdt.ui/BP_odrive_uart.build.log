@@ -1,0 +1,10 @@
+14:21:31 **** Build of configuration Debug for project BP_odrive_uart ****
+make -j4 all 
+arm-none-eabi-size   BP_odrive_uart.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49592	    880	   6864	  57336	   dff8	BP_odrive_uart.elf
+Finished building: default.size.stdout
+ 
+
+14:21:32 Build Finished. 0 errors, 0 warnings. (took 551ms)
+

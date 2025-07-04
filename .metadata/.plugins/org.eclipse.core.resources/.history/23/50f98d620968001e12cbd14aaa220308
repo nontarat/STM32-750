@@ -1,0 +1,17 @@
+/*
+ * Sensor.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+#define SRC_COMMON_BASE_CLASSES_SENSOR_HPP_
+
+class Sensor {
+public:
+	Sensor();
+	virtual ~Sensor();
+};
+
+#endif /* SRC_COMMON_BASE_CLASSES_SENSOR_HPP_ */

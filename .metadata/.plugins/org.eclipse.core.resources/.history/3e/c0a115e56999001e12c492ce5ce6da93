@@ -1,0 +1,56 @@
+/*
+  ***************************************************************************************************************
+  ***************************************************************************************************************
+  ***************************************************************************************************************
+
+  File:		  udpClientRAW.c
+  Author:     ControllersTech.com
+  Updated:    Jul 23, 2021
+
+  ***************************************************************************************************************
+  Copyright (C) 2017 ControllersTech.com
+
+  This is a free software under the GNU license, you can redistribute it and/or modify it under the terms
+  of the GNU General Public License version 3 as published by the Free Software Foundation.
+  This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly
+  or indirectly by this software, read more about this on the GNU General Public License.
+
+  ***************************************************************************************************************
+*/
+
+
+#include "lwip/pbuf.h"
+#include "lwip/udp.h"
+#include "lwip/tcp.h"
+
+#include "stdio.h"
+#include "string.h"
+
+#include "udpClientRAW.h"
+#include "stm32h7xx_hal.h"
+#include "stm32h7xx_hal_tim.h"
+void udp_receive_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p, const ip_addr_t *addr, u16_t port);
+static void udpClient_send(void);
+
+struct udp_pcb *upcb;
+char buffer[100];
+int counter = 0;
+
+extern TIM_HandleTypeDef htim1;
+
+/*
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	udpClient_send();
+}
+*/
+
+/* IMPLEMENTATION FOR UDP CLIENT :   source:https://www.geeksforgeeks.org/udp-server-client-implementation-c/
+
+1. Create UDP socket.
+2. Send message to server.
+3. Wait until response from server is received.
+4. Process reply and go back to step 2, if necessary.
+5. Close socket descriptor and exit.
+*/
+

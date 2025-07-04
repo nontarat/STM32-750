@@ -1,0 +1,17 @@
+/*
+ * pid.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_PID_HPP_
+#define SRC_COMMON_PID_HPP_
+
+class pid {
+public:
+	pid();
+	virtual ~pid();
+};
+
+#endif /* SRC_COMMON_PID_HPP_ */

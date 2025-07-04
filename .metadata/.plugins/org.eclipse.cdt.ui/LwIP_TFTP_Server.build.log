@@ -1,0 +1,7 @@
+14:42:33 **** Incremental Build of configuration Debug for project LwIP_TFTP_Server ****
+make -j4 all 
+make: *** No rule to make target 'C:/Middlewares/Third_Party/LwIP/src/netif/ethernet.c', needed by 'Middlewares/LwIP/Netif/ethernet.o'.  Stop.
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+14:42:34 Build Failed. 1 errors, 0 warnings. (took 1s.195ms)
+

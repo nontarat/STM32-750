@@ -1,0 +1,17 @@
+/*
+ * Encoder.h
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SENSOR_ENCODER_H_
+#define SRC_SENSOR_ENCODER_H_
+
+class Encoder {
+public:
+	Encoder();
+	virtual ~Encoder();
+};
+
+#endif /* SRC_SENSOR_ENCODER_H_ */

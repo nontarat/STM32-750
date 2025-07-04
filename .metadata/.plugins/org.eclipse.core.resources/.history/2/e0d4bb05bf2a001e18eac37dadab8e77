@@ -1,0 +1,18 @@
+#include "mpr121.h"
+#include "i2c.h"
+#include "main.h"
+#include "gpio.h"
+#include "stm32h7xx_hal.h"
+
+extern I2C_HandleTypeDef hi2c1;
+/* ------------- Local defines --------------- */
+
+/* Uncomment this define to enable MPR121 IRQ interrupt */
+//#define MPR121_INT_ENABLED
+
+
+/* Number of electrodes of MPR121 */
+// The default I2C address
+#define MPR121_I2CADDR_DEFAULT 0x5A        ///< default I2C address
+#define MPR121_TOUCH_THRESHOLD_DEFAULT 12  ///< default touch threshold value
+#define MPR121_RELEASE_THRESHOLD_DEFAULT 6 ///< default relese threshold value

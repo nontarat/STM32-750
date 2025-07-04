@@ -1,0 +1,19 @@
+11:44:21 **** Incremental Build of configuration Debug for project h723 ****
+make -j4 all 
+arm-none-eabi-gcc -o "h723.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\h723\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="h723.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: h723.elf
+ 
+arm-none-eabi-size  h723.elf 
+arm-none-eabi-objdump -h -S h723.elf  > "h723.list"
+arm-none-eabi-objcopy  -O ihex h723.elf  "h723.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7328	     16	   1568	   8912	   22d0	h723.elf
+Finished building: default.size.stdout
+ 
+Finished building: h723.hex
+Finished building: h723.list
+ 
+ 
+
+11:44:22 Build Finished. 0 errors, 0 warnings. (took 637ms)
+

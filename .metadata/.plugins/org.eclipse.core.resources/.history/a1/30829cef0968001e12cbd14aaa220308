@@ -1,0 +1,13 @@
+/*
+ * lowpass_filter.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_LOWPASS_FILTER_HPP_
+#define SRC_COMMON_LOWPASS_FILTER_HPP_
+
+
+
+#endif /* SRC_COMMON_LOWPASS_FILTER_HPP_ */

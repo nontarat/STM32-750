@@ -1,0 +1,18 @@
+/*
+ * lowpassfilter.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#include "lowpassfilter.h"
+
+lowpass_filter::lowpass_filter() {
+	// TODO Auto-generated constructor stub
+
+}
+
+lowpass_filter::~lowpass_filter() {
+	// TODO Auto-generated destructor stub
+}
+

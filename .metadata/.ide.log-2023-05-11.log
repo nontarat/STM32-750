@@ -1,0 +1,66 @@
+2023-05-11 13:36:50,680 [INFO] Activator:176 - 
+
+
+2023-05-11 13:36:50,687 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-11 13:37:03,466 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-11 13:37:44,615 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-05-11 13:37:44,617 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-05-11 13:37:44,618 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-05-11 17:07:14,697 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] Connection to https://espejito.fder.edu.uy/eclipse/releases/2022-03/202203161000/plugins/org.eclipse.swtchart.extensions_0.13.0.202109100616.jar failed on Valid cert chain, but no trust certificate found!. Retry attempt 0 started
+2023-05-11 17:07:14,700 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] javax.net.ssl.SSLHandshakeException: Valid cert chain, but no trust certificate found!
+2023-05-11 17:07:14,702 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+2023-05-11 17:07:14,703 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:353)
+2023-05-11 17:07:14,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:296)
+2023-05-11 17:07:14,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:291)
+2023-05-11 17:07:14,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(CertificateMessage.java:654)
+2023-05-11 17:07:14,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.CertificateMessage$T12CertificateConsumer.onCertificate(CertificateMessage.java:473)
+2023-05-11 17:07:14,711 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.CertificateMessage$T12CertificateConsumer.consume(CertificateMessage.java:369)
+2023-05-11 17:07:14,712 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+2023-05-11 17:07:14,713 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:443)
+2023-05-11 17:07:14,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:421)
+2023-05-11 17:07:14,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:183)
+2023-05-11 17:07:14,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+2023-05-11 17:07:14,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+2023-05-11 17:07:14,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1416)
+2023-05-11 17:07:14,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:456)
+2023-05-11 17:07:14,725 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:427)
+2023-05-11 17:07:14,727 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+2023-05-11 17:07:14,731 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+2023-05-11 17:07:14,733 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+2023-05-11 17:07:14,735 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+2023-05-11 17:07:14,737 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+2023-05-11 17:07:14,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+2023-05-11 17:07:14,739 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+2023-05-11 17:07:14,739 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+2023-05-11 17:07:14,741 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+2023-05-11 17:07:14,741 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+2023-05-11 17:07:14,742 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+2023-05-11 17:07:14,744 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+2023-05-11 17:07:14,746 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+2023-05-11 17:07:14,747 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+2023-05-11 17:07:14,747 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+2023-05-11 17:07:14,749 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+2023-05-11 17:07:14,750 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+2023-05-11 17:07:14,751 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+2023-05-11 17:07:14,753 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+2023-05-11 17:07:14,754 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+2023-05-11 17:07:14,755 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+2023-05-11 17:07:14,757 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+2023-05-11 17:07:14,757 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+2023-05-11 17:07:14,763 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+2023-05-11 17:07:14,766 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+2023-05-11 17:07:14,767 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+2023-05-11 17:07:14,769 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-05-11 17:07:14,771 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Caused by: org.eclipse.ecf.internal.ssl.ECFCertificateException: Valid cert chain, but no trust certificate found!
+2023-05-11 17:07:14,772 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.ecf.internal.ssl.ECFTrustManager.checkServerTrusted(ECFTrustManager.java:49)
+2023-05-11 17:07:14,773 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.AbstractTrustManagerWrapper.checkServerTrusted(SSLContextImpl.java:1510)
+2023-05-11 17:07:14,775 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/sun.security.ssl.CertificateMessage$T12CertificateConsumer.checkServerCerts(CertificateMessage.java:638)
+2023-05-11 17:07:14,776 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	... 38 more
+2023-05-11 17:21:45,459 [INFO] Activator:176 - 
+
+
+2023-05-11 17:21:45,464 [INFO] Activator:177 - !SESSION log4j initialized
+2023-05-11 17:21:58,199 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-05-11 17:22:29,629 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-05-11 17:22:29,631 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-05-11 17:22:29,633 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.

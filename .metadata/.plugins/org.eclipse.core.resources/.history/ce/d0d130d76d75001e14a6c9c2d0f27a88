@@ -1,0 +1,17 @@
+/*
+ * CurrentSense.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_BASE_CLASSES_CURRENTSENSE_H_
+#define COMMON_BASE_CLASSES_CURRENTSENSE_H_
+
+class CurrentSense {
+public:
+	CurrentSense();
+	virtual ~CurrentSense();
+};
+
+#endif /* COMMON_BASE_CLASSES_CURRENTSENSE_H_ */

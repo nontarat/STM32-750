@@ -1,0 +1,17 @@
+10:00:26 **** Build of configuration Debug for project c011_reg ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32C011xx -c -I../Core/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc -I../Drivers/STM32C0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32C0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "c011_reg.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\STM32\c011_reg\STM32C011F6PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="c011_reg.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: c011_reg.elf
+ 
+arm-none-eabi-size  c011_reg.elf 
+arm-none-eabi-objdump -h -S c011_reg.elf  > "c011_reg.list"
+   text	   data	    bss	    dec	    hex	filename
+   3440	     12	   1572	   5024	   13a0	c011_reg.elf
+Finished building: default.size.stdout
+ 
+Finished building: c011_reg.list
+ 
+
+10:00:27 Build Finished. 0 errors, 0 warnings. (took 973ms)
+

@@ -1,0 +1,17 @@
+/*
+ * Sensor.h
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_COMMON_BASE_CLASSES_SENSOR_H_
+#define SRC_COMMON_BASE_CLASSES_SENSOR_H_
+
+class Sensor {
+public:
+	Sensor();
+	virtual ~Sensor();
+};
+
+#endif /* SRC_COMMON_BASE_CLASSES_SENSOR_H_ */

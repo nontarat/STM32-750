@@ -1,0 +1,17 @@
+/*
+ * LowPassFilter.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_LOWPASSFILTER_H_
+#define COMMON_LOWPASSFILTER_H_
+
+class LowPassFilter {
+public:
+	LowPassFilter();
+	virtual ~LowPassFilter();
+};
+
+#endif /* COMMON_LOWPASSFILTER_H_ */

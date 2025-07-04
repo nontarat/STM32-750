@@ -1,0 +1,13 @@
+lcd.c:25:6:LCD_WR_REG	1
+lcd.c:40:6:LCD_WR_DATA	1
+lcd.c:56:6:LCD_WriteReg	1
+lcd.c:69:6:LCD_WriteRAM_Prepare	1
+lcd.c:81:6:Lcd_WriteData_16Bit	1
+lcd.c:98:6:LCD_DrawPoint	1
+lcd.c:111:6:LCD_Clear	3
+lcd.c:135:6:LCD_GPIOInit	1
+lcd.c:171:6:LCD_RESET	1
+lcd.c:186:6:LCD_Init	1
+lcd.c:289:6:LCD_SetWindows	1
+lcd.c:314:6:LCD_SetCursor	1
+lcd.c:329:6:LCD_direction	5

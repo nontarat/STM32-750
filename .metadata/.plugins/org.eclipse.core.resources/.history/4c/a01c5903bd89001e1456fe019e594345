@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>lwIP - A Lightweight TCP/IP Stack</title>
+    <style type="text/css" id="operaUserStyle"></style>
+</head>
+<body bgcolor="white" text="black">
+
+<?php
+$servername = "localhost";
+$username = "tanakulgroup";
+$password = "TNKGtnk@2021";
+$dbname = "tanakulgroup";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// ตรวจสอบการเชื่อมต่อ
+if ($conn->connect_error) {
+    die("connect fails " . $conn->connect_error);
+} else {
+    echo "success";
+    // ทำต่อไปที่นี่
+}
+
+// ปิดการเชื่อมต่อ
+$conn->close();
+
+?>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+10:58:43 **** Build of configuration Debug for project TS_BB ****
+make -j4 all 
+arm-none-eabi-size   TS_BB.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 644136	    652	  20760	 665548	  a27cc	TS_BB.elf
+Finished building: default.size.stdout
+ 
+
+10:58:44 Build Finished. 0 errors, 0 warnings. (took 746ms)
+

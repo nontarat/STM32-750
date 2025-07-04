@@ -1,0 +1,21 @@
+10:39:54 **** Incremental Build of configuration Debug for project guage ****
+make -j4 all 
+arm-none-eabi-g++ "../TouchGFX/gui/src/screen1_screen/Screen1View.cpp" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/gui/src/screen1_screen/Screen1View.d" -MT"TouchGFX/gui/src/screen1_screen/Screen1View.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/gui/src/screen1_screen/Screen1View.o"
+arm-none-eabi-g++ "../TouchGFX/gui/src/model/Model.cpp" -mcpu=cortex-m7 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -femit-class-debug-always -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"TouchGFX/gui/src/model/Model.d" -MT"TouchGFX/gui/src/model/Model.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "TouchGFX/gui/src/model/Model.o"
+arm-none-eabi-g++ -o "guage.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m7 -T"D:\STM32\guage\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="guage.map" -Wl,--gc-sections -static -L"D:\STM32\guage\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: guage.elf
+ 
+arm-none-eabi-size   guage.elf 
+arm-none-eabi-objdump -h -S  guage.elf  > "guage.list"
+arm-none-eabi-objcopy  -O ihex  guage.elf  "guage.hex"
+   text	   data	    bss	    dec	    hex	filename
+ 878286	    288	  28996	 907570	  dd932	guage.elf
+Finished building: default.size.stdout
+ 
+Finished building: guage.hex
+ 
+Finished building: guage.list
+ 
+
+10:39:58 Build Finished. 0 errors, 0 warnings. (took 3s.359ms)
+

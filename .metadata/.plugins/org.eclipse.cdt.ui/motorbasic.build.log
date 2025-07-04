@@ -1,0 +1,10 @@
+15:44:00 **** Incremental Build of configuration Debug for project motorbasic ****
+make -j4 all 
+arm-none-eabi-size   motorbasic.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7536	     24	   1568	   9128	   23a8	motorbasic.elf
+Finished building: default.size.stdout
+ 
+
+15:44:01 Build Finished. 0 errors, 0 warnings. (took 197ms)
+

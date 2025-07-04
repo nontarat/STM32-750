@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;motorfoc/SimpleFOC/drivers&apos; to &apos;motor_drivers&apos;" description="Rename resource &apos;drivers&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SimpleFOC/drivers" name="motor_drivers" stamp="1698484072497" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;motorfoc/Core/Src/main.c&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/main.c" name="main.cpp" stamp="1698487218068" updateReferences="true"/>
+</session>

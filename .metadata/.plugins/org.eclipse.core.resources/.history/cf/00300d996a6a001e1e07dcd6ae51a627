@@ -1,0 +1,35 @@
+/*
+ * BLDCDriver3PWM.h
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+#define SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_
+#include "../common/base_classes/BLDCDriver.h"
+#include "../common/foc_utils.h"
+#include "../common/time_utils.h"
+#include "../common/defaults.h"
+class BLDCDriver3PWM: public BLDCDriver {
+public:
+	BLDCDriver3PWM();
+	virtual ~BLDCDriver3PWM();
+  	int init() {};
+    /** Motor disable function */
+  	void disable() {};
+    /** Motor enable function */
+    void enable() {};
+
+    // hardware variables
+  	int pwmA; //!< phase A pwm pin number
+  	int pwmB; //!< phase B pwm pin number
+  	int pwmC; //!< phase C pwm pin number
+    int enable_pin; //!< enable pin number
+    void setPwm(float Ua, float Ub, float Uc) override;
+
+  private:
+
+};
+
+#endif /* SRC_MOTOR_DRIVERS_BLDCDRIVER3PWM_H_ */

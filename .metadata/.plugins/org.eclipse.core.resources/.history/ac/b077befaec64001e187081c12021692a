@@ -1,0 +1,24 @@
+/*
+ * MagneticSensorSPI.h
+ *
+ *  Created on: Oct 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_MAGNETICSENSORSPI_H_
+#define INC_MAGNETICSENSORSPI_H_
+
+/******************************************************************************/
+//extern long  cpr;
+//extern float full_rotation_offset;
+//extern long  angle_data_prev;
+//extern unsigned long velocity_calc_timestamp;
+//extern float angle_prev;
+/******************************************************************************/
+void SPI2_Init_(void);
+void MagneticSensorSPI_Init(void);
+float getAngle(void);
+float getVelocity(void);
+/******************************************************************************/
+
+#endif /* INC_MAGNETICSENSORSPI_H_ */

@@ -1,0 +1,17 @@
+15:05:32 **** Incremental Build of configuration Debug for project 3pwmsine ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "3pwmsine.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\3pwmsine\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3pwmsine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 3pwmsine.elf
+ 
+arm-none-eabi-size   3pwmsine.elf 
+arm-none-eabi-objdump -h -S  3pwmsine.elf  > "3pwmsine.list"
+   text	   data	    bss	    dec	    hex	filename
+  26820	    824	   2232	  29876	   74b4	3pwmsine.elf
+Finished building: default.size.stdout
+ 
+Finished building: 3pwmsine.list
+ 
+
+15:05:33 Build Finished. 0 errors, 0 warnings. (took 1s.249ms)
+

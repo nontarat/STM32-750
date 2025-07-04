@@ -1,0 +1,10 @@
+10:49:51 **** Incremental Build of configuration Debug for project eth_kk ****
+make -j4 all 
+arm-none-eabi-size   eth_kk.elf 
+   text	   data	    bss	    dec	    hex	filename
+  95048	    152	 350443	 445643	  6cccb	eth_kk.elf
+Finished building: default.size.stdout
+ 
+
+10:49:52 Build Finished. 0 errors, 0 warnings. (took 609ms)
+

@@ -1,0 +1,24 @@
+#include "mpr121.h"
+#include "mpr121_def.h"
+#include "i2c.h"
+#include "main.h"
+extern I2C_HandleTypeDef hi2c1;
+/* ------------- Local defines --------------- */
+
+/* Uncomment this define to enable MPR121 IRQ interrupt */
+//#define MPR121_INT_ENABLED
+
+
+/* Number of electrodes of MPR121 */
+#define NUM_OF_ELECTRODES	13
+
+
+/* MPR121 I2C bus address */
+#define MPR121_ADDRESS_BYTE	0x5A
+
+
+//local function
+static bool write_register(uint8_t, uint8_t);
+static bool read_register(uint8_t, uint8_t *);
+
+

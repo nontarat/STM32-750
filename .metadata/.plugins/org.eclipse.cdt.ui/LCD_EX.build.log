@@ -1,0 +1,31 @@
+13:08:58 **** Incremental Build of configuration Debug for project LCD_EX ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/lcd.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lcd.d" -MT"Core/Src/lcd.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lcd.o"
+../Core/Src/lcd.c:35:2: warning: initialization of 'short unsigned int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   35 |  NULL,
+      |  ^~~~
+../Core/Src/lcd.c:35:2: note: (near initialization for 'st7735_pIO.Address')
+../Core/Src/lcd.c: In function 'LCD_Test':
+../Core/Src/lcd.c:77:12: warning: unused variable 'tick' [-Wunused-variable]
+   77 |   uint32_t tick = get_tick();
+      |            ^~~~
+../Core/Src/lcd.c:48:10: warning: unused variable 'text' [-Wunused-variable]
+   48 |  uint8_t text[20];
+      |          ^~~~
+arm-none-eabi-gcc -o "LCD_EX.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\LCD_EX\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LCD_EX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LCD_EX.elf
+ 
+arm-none-eabi-size   LCD_EX.elf 
+arm-none-eabi-objdump -h -S  LCD_EX.elf  > "LCD_EX.list"
+arm-none-eabi-objcopy  -O ihex  LCD_EX.elf  "LCD_EX.hex"
+   text	   data	    bss	    dec	    hex	filename
+  35928	    268	   3196	  39392	   99e0	LCD_EX.elf
+Finished building: default.size.stdout
+ 
+Finished building: LCD_EX.hex
+ 
+Finished building: LCD_EX.list
+ 
+
+13:08:59 Build Finished. 0 errors, 3 warnings. (took 1s.110ms)
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>STM32H750B-DK</title>
+</head>
+<body>
+
+ <h1>Data from MySQL Database</h1>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="time"></p>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+document.getElementById("demo1").innerHTML = Math.random();
+document.getElementById('time').innerHTML = Date();
+
+function autoRefresh() {
+        window.location = window.location.href;
+    }
+    setInterval('autoRefresh()', 1000);
+    
+    var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") 
+  {
+    if(typeof(w) == "undefined") 
+    {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+
+</script>
+
+
+</body>
+</html>
+

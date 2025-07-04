@@ -1,0 +1,10 @@
+14:21:39 **** Build of configuration Debug for project gpss ****
+make -j4 all 
+arm-none-eabi-size   gpss.elf 
+   text	   data	    bss	    dec	    hex	filename
+  68544	    736	  10328	  79608	  136f8	gpss.elf
+Finished building: default.size.stdout
+ 
+
+14:21:40 Build Finished. 0 errors, 0 warnings. (took 479ms)
+

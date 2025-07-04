@@ -1,0 +1,13 @@
+/*
+ * SimpleFOCDebug.h
+ *
+ *  Created on: Oct 9, 2023
+ *      Author: user
+ */
+
+#ifndef INC_SIMPLEFOCDEBUG_H_
+#define INC_SIMPLEFOCDEBUG_H_
+#include "stm32h7xx.h"
+
+
+#endif /* INC_SIMPLEFOCDEBUG_H_ */

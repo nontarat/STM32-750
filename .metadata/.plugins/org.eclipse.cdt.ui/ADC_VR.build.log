@@ -1,0 +1,10 @@
+10:58:52 **** Incremental Build of configuration Debug for project ADC_VR ****
+make -j4 all 
+arm-none-eabi-size   ADC_VR.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32416	    392	   6248	  39056	   9890	ADC_VR.elf
+Finished building: default.size.stdout
+ 
+
+10:58:52 Build Finished. 0 errors, 0 warnings. (took 222ms)
+

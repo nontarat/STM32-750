@@ -1,0 +1,43 @@
+#include <gui/screen1_screen/Screen1View.hpp>
+#include "stm32h7xx_hal.h"
+extern RTC_HandleTypeDef hrtc;
+
+Screen1View::Screen1View()
+{
+
+}
+
+void Screen1View::setupScreen()
+{
+    Screen1ViewBase::setupScreen();
+}
+
+void Screen1View::tearDownScreen()
+{
+    Screen1ViewBase::tearDownScreen();
+}
+void Screen1View::updateTime(uint8_t hour,uint8_t minute, uint8_t second)
+{
+	analogClock1.setTime24Hour(hour, minute, second);
+	digitalClock1.setTime24Hour(hour, minute, second);
+}
+void Screen1View::updateDate(uint8_t Date  , uint8_t month  , uint8_t year)
+{
+	Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%2d/" "%2d/" "%2d", Date,month,year);
+	textArea1.invalidate();
+}
+void Screen1View::timestamp()
+{
+
+	 HAL_PWR_EnableBkUpAccess();
+	 HAL_RTCEx_BKUPWrite(&hrtc, RTC_BKP_DR1, 2);	//Write new data in BKP_DR1
+
+	 HAL_PWR_DisableBkUpAccess();
+}
+
+void Screen1View::timeshow()
+{
+	Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "non" );
+	textArea2.invalidate();
+
+}

@@ -1,0 +1,18 @@
+/*
+ * focutils.cpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#include "focutils.h"
+
+foc_utils::foc_utils() {
+	// TODO Auto-generated constructor stub
+
+}
+
+foc_utils::~foc_utils() {
+	// TODO Auto-generated destructor stub
+}
+

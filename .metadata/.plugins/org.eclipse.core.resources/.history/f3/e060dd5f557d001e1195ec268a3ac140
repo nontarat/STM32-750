@@ -1,0 +1,60 @@
+/*
+ * sPWM.h
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_SPWM_H_
+#define INC_SPWM_H_
+#include "main.h"
+#include "stdint.h"
+#include "stdio.h"
+#define TIM1_PERIOD		2024
+#define CPU_CLOCK		64000000
+#define MAX16BIT		65535
+#define MAX_FREQUENCY	60
+#define MIN_FREQUENCY	10
+#define NUMBER_OF_POINT	128
+#define COUNT_TIME		17
+extern TIM_HandleTypeDef htim1;
+typedef enum
+{
+	_25khZ  =  25000,
+	_30Khz  =  30000,
+	_50Khz  =  50000,
+	_100Khz = 100000
+}eFreq_Type;
+
+typedef enum
+{
+	OFF = 0,
+	 ON = 1,
+
+}eSwitch_Type;
+
+typedef struct
+{
+	//eSwitch_Type AA;
+	uint32_t Prescaler;
+	uint32_t Period;
+	uint32_t Pulse;
+}Freq_HandleTypeDef;
+
+typedef struct
+{
+	OFF = 0;
+	 ON = 1;
+	uint8_t _freq;
+	uint32_t _delay;
+	uint8_t _old_freq;
+}Status_Type;
+
+void EN_VFD(eSwitch_Type _status);
+void GenFreq(Freq_HandleTypeDef  * const me,eFreq_Type _Freq);
+void DelayMs(uint32_t ms);
+void Load_Table(float am);
+void RunPureSine_Mode(void);
+int getDipSw(void);
+
+#endif /* INC_SPWM_H_ */

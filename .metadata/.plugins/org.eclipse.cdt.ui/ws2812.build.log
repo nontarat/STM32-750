@@ -1,0 +1,10 @@
+14:21:49 **** Build of configuration Debug for project ws2812 ****
+make -j4 all 
+arm-none-eabi-size   ws2812.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25628	     24	   2288	  27940	   6d24	ws2812.elf
+Finished building: default.size.stdout
+ 
+
+14:21:49 Build Finished. 0 errors, 0 warnings. (took 291ms)
+

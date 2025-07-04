@@ -1,0 +1,19 @@
+/*
+ * delay.h
+ *
+ *  Created on: Oct 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_DELAY_H_
+#define INC_DELAY_H_
+
+#include "stm32h7xx.h"
+#include <stdint.h>
+uint32_t u32;
+uint32_t nms = 100;
+void delay_us(unsigned long nus);
+void delay_ms(unsigned short nms);
+void systick_CountMode(void);
+
+#endif /* INC_DELAY_H_ */

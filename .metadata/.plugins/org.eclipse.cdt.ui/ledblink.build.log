@@ -1,0 +1,19 @@
+10:05:17 **** Incremental Build of configuration Debug for project ledblink ****
+make -j4 all 
+arm-none-eabi-gcc -o "ledblink.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\ledblink\STM32H750XBHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ledblink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ledblink.elf
+ 
+arm-none-eabi-size   ledblink.elf 
+arm-none-eabi-objdump -h -S  ledblink.elf  > "ledblink.list"
+arm-none-eabi-objcopy  -O ihex  ledblink.elf  "ledblink.hex"
+   text	   data	    bss	    dec	    hex	filename
+  53148	    216	   5288	  58652	   e51c	ledblink.elf
+Finished building: default.size.stdout
+ 
+Finished building: ledblink.hex
+ 
+Finished building: ledblink.list
+ 
+
+10:05:18 Build Finished. 0 errors, 0 warnings. (took 1s.600ms)
+

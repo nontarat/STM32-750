@@ -1,0 +1,10 @@
+09:57:02 **** Build of configuration Debug for project fdcan_slave3 ****
+make -j4 all 
+arm-none-eabi-size   fdcan_slave3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19384	    128	   1800	  21312	   5340	fdcan_slave3.elf
+Finished building: default.size.stdout
+ 
+
+09:57:02 Build Finished. 0 errors, 0 warnings. (took 341ms)
+

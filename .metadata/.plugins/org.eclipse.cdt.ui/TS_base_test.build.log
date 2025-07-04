@@ -1,0 +1,20 @@
+16:58:05 **** Incremental Build of configuration Debug for project TS_base_test ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../TouchGFX/App -I../TouchGFX/target/generated -I../TouchGFX/target -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/touchgfx/framework/include -I../TouchGFX/generated/fonts/include -I../TouchGFX/generated/gui_generated/include -I../TouchGFX/generated/images/include -I../TouchGFX/generated/texts/include -I../TouchGFX/generated/videos/include -I../TouchGFX/gui/include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "TS_base_test.elf" @"objects.list"  -l:libtouchgfx-float-abi-hard.a -mcpu=cortex-m7 -T"C:\Users\user\Desktop\TS_base_test\TS_base_test\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TS_base_test.map" -Wl,--gc-sections -static -L"C:\Users\user\Desktop\TS_base_test\TS_base_test\Middlewares\ST\touchgfx\lib\core\cortex_m7\gcc" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: TS_base_test.elf
+ 
+arm-none-eabi-size   TS_base_test.elf 
+arm-none-eabi-objdump -h -S  TS_base_test.elf  > "TS_base_test.list"
+arm-none-eabi-objcopy  -O ihex  TS_base_test.elf  "TS_base_test.hex"
+   text	   data	    bss	    dec	    hex	filename
+ 279560	    652	  23320	 303532	  4a1ac	TS_base_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: TS_base_test.hex
+ 
+Finished building: TS_base_test.list
+ 
+
+16:58:09 Build Finished. 0 errors, 0 warnings. (took 3s.440ms)
+

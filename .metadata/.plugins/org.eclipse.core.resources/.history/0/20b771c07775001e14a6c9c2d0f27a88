@@ -1,0 +1,18 @@
+/*
+ * BLDCMotor.cpp
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#include "BLDCMotor.h"
+
+BLDCMotor::BLDCMotor() {
+	// TODO Auto-generated constructor stub
+
+}
+
+BLDCMotor::~BLDCMotor() {
+	// TODO Auto-generated destructor stub
+}
+

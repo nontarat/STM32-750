@@ -1,0 +1,30 @@
+11:16:37 **** Incremental Build of configuration Debug for project h723_spi_test_lcd_master ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:33: warning: pointer targets in passing argument 1 of 'lcd_send_string' differ in signedness [-Wpointer-sign]
+  111 |                 lcd_send_string(rxData);
+      |                                 ^~~~~~
+      |                                 |
+      |                                 uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/lcd.h:24:28: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   24 | void lcd_send_string(char *str);
+      |                      ~~~~~~^~~
+../Core/Src/main.c:90:17: warning: unused variable 'txData' [-Wunused-variable]
+   90 |         uint8_t txData[2] = {0xA5, 0x5A}; // à¸?à¹?à¸­à¸¡à¸¹à¸¥à¸—à¸µà¹?à¸ªà¹?à¸?à¹?à¸?à¸¢à¸±à¸? slave
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "h723_spi_test_lcd_master.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\h723_spi_test_lcd_master\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="h723_spi_test_lcd_master.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: h723_spi_test_lcd_master.elf
+ 
+arm-none-eabi-size  h723_spi_test_lcd_master.elf 
+arm-none-eabi-objdump -h -S h723_spi_test_lcd_master.elf  > "h723_spi_test_lcd_master.list"
+   text	   data	    bss	    dec	    hex	filename
+  18500	     16	   1808	  20324	   4f64	h723_spi_test_lcd_master.elf
+Finished building: default.size.stdout
+ 
+Finished building: h723_spi_test_lcd_master.list
+ 
+
+11:16:38 Build Finished. 0 errors, 2 warnings. (took 1s.486ms)
+

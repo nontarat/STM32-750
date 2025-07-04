@@ -1,0 +1,19 @@
+09:56:51 **** Build of configuration Debug for project 24cxx ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sys.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sys.d" -MT"Core/Src/sys.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sys.o"
+../Core/Src/sys.c: In function 'Cache_Enable':
+../Core/Src/sys.c:11:5: warning: implicit declaration of function 'SCB_EnableICache' [-Wimplicit-function-declaration]
+   11 |     SCB_EnableICache();//ʹ��I-Cache
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/sys.c:12:5: warning: implicit declaration of function 'SCB_EnableDCache' [-Wimplicit-function-declaration]
+   12 |     SCB_EnableDCache();//ʹ��D-Cache
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/sys.c:13:2: error: 'SCB' undeclared (first use in this function)
+   13 |  SCB->CACR|=1<<2;   //ǿ��D-Cache͸д,�粻����,ʵ��ʹ���п���������������
+      |  ^~~
+../Core/Src/sys.c:13:2: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/sys.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+09:56:52 Build Failed. 2 errors, 2 warnings. (took 638ms)
+

@@ -1,0 +1,10 @@
+17:51:30 **** Incremental Build of configuration Debug for project BLDC_Sensored ****
+make -j4 all 
+arm-none-eabi-size   BLDC_Sensored.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17996	     60	   2340	  20396	   4fac	BLDC_Sensored.elf
+Finished building: default.size.stdout
+ 
+
+17:51:31 Build Finished. 0 errors, 0 warnings. (took 194ms)
+

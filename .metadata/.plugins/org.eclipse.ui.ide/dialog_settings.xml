@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\STM32\Nucleo-STM32H723ZG-SimpleETH_TCPClient-master"/>
+			<item value="D:\STM32\STM32H750_Disco_ETH"/>
+			<item value="C:\Users\user\Downloads\spn7\en.X-CUBE-SPN7\STM32CubeExpansion_SPN7_V1.1.0\Projects\Multi\Examples\MotorControl\SW4STM32\STM32F103RB_Nucleo"/>
+			<item value="C:\Users\user\Downloads\mpr121\mpr121"/>
+			<item value="C:\Users\user\Documents\stm32f401_project-main\stm32f401_project-main"/>
+			<item value="C:\Users\user\Downloads\TUT1_ButtonLED\TUT1_ButtonLED"/>
+			<item value="C:\Users\user\Desktop\TouchGFXDemo"/>
+			<item value="C:\Users\user\Desktop\TS_base_test\TS_base_test"/>
+			<item value="C:\Users\user\Downloads\F103_GPS_TUT.zip"/>
+			<item value="D:\MiniSTM32H7xx-master\MiniSTM32H7xx-master\SDK\HAL\STM32H743\06-SPIFlash_Test"/>
+			<item value="D:\MiniSTM32H7xx-master\MiniSTM32H7xx-master\SDK\HAL\STM32H750\06-SPIFlash_Test"/>
+			<item value="C:\Users\user\Downloads\Custom_Signal_generation_using_PWM_and_DMA\STM32H7_Custom_Signal\STM32H7_Custom_Signal"/>
+			<item value="C:\Users\user\Downloads\DAC_TUT.zip"/>
+			<item value="C:\Users\user\Downloads\TIMER_Sync_PWMPhase.zip"/>
+			<item value="C:\Users\user\Downloads\F103_GPS_TUT"/>
+			<item value="C:\Users\user\Downloads\GPS\GPS"/>
+			<item value="C:\Users\user\Downloads\GPS"/>
+			<item value="D:\STM32\bp_encoder_buttonfloor"/>
+		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="659"/>
+		<item key="DIALOG_Y_ORIGIN" value="226"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="642"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,10 @@
+11:05:49 **** Incremental Build of configuration Release for project TS_qspi ****
+make -j4 all 
+arm-none-eabi-size   TS_qspi.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29026	    140	   3112	  32278	   7e16	TS_qspi.elf
+Finished building: default.size.stdout
+ 
+
+11:05:49 Build Finished. 0 errors, 0 warnings. (took 676ms)
+

@@ -1,0 +1,76 @@
+2023-11-08 16:47:43,501 [INFO] Activator:176 - 
+
+
+2023-11-08 16:47:43,507 [INFO] Activator:177 - !SESSION log4j initialized
+2023-11-08 16:47:51,518 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-11-08 16:48:18,869 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412
+2023-11-08 16:48:18,952 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2023-11-08 16:48:18,952 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2023-11-08 16:48:18,990 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2023-11-08 16:48:19,235 [INFO] ApiDb:250 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:19,256 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-11-08 16:48:19,259 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-11-08 16:48:19,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-11-08 16:48:19,276 [INFO] DbMcusAds:125 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:19,505 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-08 16:48:20,258 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2023-11-08 16:48:21,096 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2023-11-08 16:48:21,099 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2023-11-08 16:48:21,100 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2023-11-08 16:48:21,100 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,100 [INFO] ApiDb:250 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:21,101 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,101 [INFO] DbMcusAds:125 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:21,101 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,101 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,101 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-08 16:48:21,424 [INFO] MainPanel:262 - HeapMemory: 268435456
+2023-11-08 16:48:21,685 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2023-11-08 16:48:21,685 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2023-11-08 16:48:21,685 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2023-11-08 16:48:21,687 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,687 [INFO] ApiDb:250 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:21,687 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,687 [INFO] DbMcusAds:125 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/
+2023-11-08 16:48:21,687 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,687 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\user\.stmcufinder\plugins\mcufinder/ => C:\Users\user\.stmcufinder\plugins\mcufinder
+2023-11-08 16:48:21,688 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\user\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-11-08 16:48:21,719 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412
+2023-11-08 16:48:21,722 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2023-11-08 16:48:21,725 [INFO] PluginManage:310 - Check plugin analytics
+2023-11-08 16:48:22,616 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: STM32CubeMX.6.8.0,STM32CubeMX.6.8.1,STM32CubeMX.6.5.0,STM32CubeMX.6.9.1,STM32CubeMX.6.9.2
+2023-11-08 16:48:22,616 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: emotas.I-CUBE-CANOPEN.1.1.3,STMicroelectronics.X-CUBE-TOUCHGFX.4.21.0,STMicroelectronics.X-CUBE-TOUCHGFX.4.21.1,STMicroelectronics.X-CUBE-TOUCHGFX.4.18.0,STMicroelectronics.X-CUBE-TOUCHGFX.4.22.1
+2023-11-08 16:48:22,617 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: FW.H7.1.11.0,FW.G0.1.6.0,FW.F4.1.27.0
+2023-11-08 16:48:22,620 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2023-11-08 16:48:22,621 [INFO] PluginManage:310 - Check plugin cadmodel
+2023-11-08 16:48:22,921 [INFO] CADModel:105 - Init CAD model plugin
+2023-11-08 16:48:22,921 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2023-11-08 16:48:22,921 [INFO] PluginManage:310 - Check plugin clock
+2023-11-08 16:48:23,511 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2023-11-08 16:48:23,511 [INFO] PluginManage:310 - Check plugin ddr
+2023-11-08 16:48:23,515 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2023-11-08 16:48:23,517 [INFO] PluginManage:310 - Check plugin filemanager
+2023-11-08 16:48:23,703 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2023-11-08 16:48:23,703 [INFO] PluginManage:310 - Check plugin ipmanager
+2023-11-08 16:48:23,714 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2023-11-08 16:48:23,715 [INFO] PluginManage:310 - Check plugin lpbam
+2023-11-08 16:48:23,774 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2023-11-08 16:48:23,775 [INFO] PluginManage:310 - Check plugin memorymap
+2023-11-08 16:48:23,821 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2023-11-08 16:48:23,821 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2023-11-08 16:48:23,846 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2023-11-08 16:48:23,846 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2023-11-08 16:48:23,998 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2023-11-08 16:48:24,165 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2023-11-08 16:48:24,165 [INFO] PluginManage:310 - Check plugin power
+2023-11-08 16:48:24,288 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2023-11-08 16:48:24,289 [INFO] PluginManage:310 - Check plugin projectmanager
+2023-11-08 16:48:24,306 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2023-11-08 16:48:24,306 [INFO] PluginManage:310 - Check plugin thirdparty
+2023-11-08 16:48:27,069 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2023-11-08 16:48:27,070 [INFO] PluginManage:310 - Check plugin tools
+2023-11-08 16:48:27,090 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2023-11-08 16:48:27,092 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2023-11-08 16:48:27,093 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2023-11-08 16:48:27,200 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2023-11-08 16:48:27,202 [INFO] PluginManage:310 - Check plugin tutovideos

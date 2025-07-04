@@ -1,0 +1,19 @@
+/*
+ * SimpleFOC.hpp
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_SIMPLEFOC_HPP_
+#define SRC_SIMPLEFOC_HPP_
+
+
+#include "BLDCMotor.hpp"
+#include "sensors/Encoder.hpp"
+#include "sensors/MagneticSensorSPI.hpp"
+#include "motor_drivers/BLDCDriver3PWM.hpp"
+#include "current_sense/InlineCurrentSense.hpp"
+
+
+#endif /* SRC_SIMPLEFOC_HPP_ */

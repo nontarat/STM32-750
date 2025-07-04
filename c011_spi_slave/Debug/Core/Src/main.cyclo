@@ -1,0 +1,10 @@
+../Core/Src/main.c:74:10:Flash_Write_Data	3
+../Core/Src/main.c:96:6:Erase_Flash	2
+../Core/Src/main.c:116:6:Flash_Read_Data	2
+../Core/Src/main.c:124:6:HAL_SPI_RxCpltCallback	2
+../Core/Src/main.c:132:6:HAL_SPI_TxCpltCallback	2
+../Core/Src/main.c:145:5:main	3
+../Core/Src/main.c:205:6:SystemClock_Config	3
+../Core/Src/main.c:242:13:MX_SPI1_Init	2
+../Core/Src/main.c:281:13:MX_GPIO_Init	1
+../Core/Src/main.c:313:6:Error_Handler	1

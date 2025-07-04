@@ -1,0 +1,10 @@
+09:52:39 **** Build of configuration Debug for project TFT_EXAMPLE ****
+make -j4 all 
+arm-none-eabi-size   TFT_EXAMPLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  61472	    268	   3196	  64936	   fda8	TFT_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+
+09:52:39 Build Finished. 0 errors, 0 warnings. (took 361ms)
+

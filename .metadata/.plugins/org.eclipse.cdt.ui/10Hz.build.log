@@ -1,0 +1,20 @@
+17:31:14 **** Incremental Build of configuration Debug for project 10Hz ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "10Hz.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\10Hz\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10Hz.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 10Hz.elf
+ 
+arm-none-eabi-size   10Hz.elf 
+arm-none-eabi-objdump -h -S  10Hz.elf  > "10Hz.list"
+arm-none-eabi-objcopy  -O ihex  10Hz.elf  "10Hz.hex"
+   text	   data	    bss	    dec	    hex	filename
+  12472	     24	   1648	  14144	   3740	10Hz.elf
+Finished building: default.size.stdout
+ 
+Finished building: 10Hz.hex
+ 
+Finished building: 10Hz.list
+ 
+
+17:31:15 Build Finished. 0 errors, 0 warnings. (took 866ms)
+

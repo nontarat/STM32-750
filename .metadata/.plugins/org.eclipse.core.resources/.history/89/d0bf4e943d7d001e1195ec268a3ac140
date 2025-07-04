@@ -1,0 +1,18 @@
+/*
+ * sPWM.c
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+#include "sPWM.h"
+void EN_VFD(eSwitch_Type _status)
+{
+	switch (_status)
+	{
+	case ON  : {} break;
+	case OFF : {} break;
+
+	}
+}
+
+

@@ -1,0 +1,17 @@
+/*
+ * Sensor.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef COMMON_BASE_CLASSES_SENSOR_H_
+#define COMMON_BASE_CLASSES_SENSOR_H_
+
+class Sensor {
+public:
+	Sensor();
+	virtual ~Sensor();
+};
+
+#endif /* COMMON_BASE_CLASSES_SENSOR_H_ */

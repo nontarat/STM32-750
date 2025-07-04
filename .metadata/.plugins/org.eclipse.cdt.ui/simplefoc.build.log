@@ -1,0 +1,19 @@
+17:28:25 **** Incremental Build of configuration Debug for project simplefoc ****
+make -j4 all 
+arm-none-eabi-g++ -o "simplefoc.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\simplefoc\STM32H750VBTX_FLASH.ld" -Wl,-Map="simplefoc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: simplefoc.elf
+ 
+arm-none-eabi-size   simplefoc.elf 
+arm-none-eabi-objdump -h -S  simplefoc.elf  > "simplefoc.list"
+arm-none-eabi-objcopy  -O ihex  simplefoc.elf  "simplefoc.hex"
+   text	   data	    bss	    dec	    hex	filename
+  23476	   1128	   2184	  26788	   68a4	simplefoc.elf
+Finished building: default.size.stdout
+ 
+Finished building: simplefoc.hex
+ 
+Finished building: simplefoc.list
+ 
+
+17:28:26 Build Finished. 0 errors, 0 warnings. (took 826ms)
+

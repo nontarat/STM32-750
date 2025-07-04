@@ -1,0 +1,18 @@
+/*
+ * Sensor.cpp
+ *
+ *  Created on: Oct 14, 2023
+ *      Author: user
+ */
+
+#include "Sensor.h"
+#include "../Src/common/foc_utils.h"
+Sensor::Sensor() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Sensor::~Sensor() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,10 @@
+09:57:08 **** Build of configuration Debug for project test_touch ****
+make -j4 all 
+arm-none-eabi-size   test_touch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6336	     24	   1568	   7928	   1ef8	test_touch.elf
+Finished building: default.size.stdout
+ 
+
+09:57:08 Build Finished. 0 errors, 0 warnings. (took 359ms)
+

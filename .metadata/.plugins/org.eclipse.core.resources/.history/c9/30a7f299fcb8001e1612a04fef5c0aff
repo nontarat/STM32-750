@@ -1,0 +1,21 @@
+function sendDatalog() {
+  // ดึงค่าอุณหภูมิและความชื้นจากฟอร์ม
+  var temperature = document.getElementById("temperature").value;
+  var humidity = document.getElementById("humidity").value;
+
+  // สร้าง URL ด้วยข้อมูลที่ได้
+  var url = "https://tanakulgroup.com/iot_project/connect.php?" +
+            "temperature=" + encodeURIComponent(temperature) +
+            "&humidity=" + encodeURIComponent(humidity);
+
+  // ส่งข้อมูลไปยัง URL โดยใช้ XMLHttpRequest
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // การทำงานเมื่อสำเร็จ
+      console.log("Data sent successfully!");
+    }
+  };
+  xhr.send();
+}

@@ -1,0 +1,10 @@
+14:56:57 **** Incremental Build of configuration Debug for project BLDC_DRIVER ****
+make -j4 all 
+arm-none-eabi-size   BLDC_DRIVER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17776	    112	   2360	  20248	   4f18	BLDC_DRIVER.elf
+Finished building: default.size.stdout
+ 
+
+14:56:58 Build Finished. 0 errors, 0 warnings. (took 300ms)
+

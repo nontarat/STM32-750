@@ -1,0 +1,8 @@
+../Core/Src/main.c:65:6:write_flash	2
+../Core/Src/main.c:75:6:write_flash_int	1
+../Core/Src/main.c:81:6:write_flash_float	1
+../Core/Src/main.c:87:6:write_flash_char	1
+../Core/Src/main.c:97:5:main	1
+../Core/Src/main.c:173:6:SystemClock_Config	3
+../Core/Src/main.c:210:13:MX_GPIO_Init	1
+../Core/Src/main.c:241:6:Error_Handler	1

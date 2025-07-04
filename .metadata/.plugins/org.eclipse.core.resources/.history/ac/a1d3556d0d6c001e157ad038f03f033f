@@ -1,0 +1,5 @@
+build/MINGW32_NT-6.2/generated/images/src/Oven_UI/Main_oven_select/image_icon_buttom.o: \
+ generated/images/src/Oven_UI/Main_oven_select/image_icon_buttom.cpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:

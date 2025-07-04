@@ -1,0 +1,101 @@
+/*
+ * mpr121.c
+ *
+ *  Created on: Sep 14, 2023
+ *      Author: user
+ */
+#include "main.h"
+
+#include "mpr121.h"
+
+void mpr121_init(void)
+{
+
+}
+
+
+uint8_t MPR121_ReadRegister8(uint8_t reg) {
+  uint8_t data = 0;
+
+  // Read the 8-bit register value from the MPR121 device
+  HAL_I2C_Mem_Read(&hi2c1, MPR121_I2C_ADDRESS << 1, reg, I2C_MEMADD_SIZE_8BIT, &data, 1, HAL_MAX_DELAY);
+
+  return data;
+}
+
+
+uint16_t MPR121_ReadRegister16(uint8_t reg)
+{
+  uint16_t data = 0;
+
+  // Read the 16-bit register value from the MPR121 device
+  HAL_I2C_Mem_Read(&hi2c1, MPR121_I2C_ADDRESS << 1, reg, I2C_MEMADD_SIZE_8BIT, (uint8_t*)&data, 2, HAL_MAX_DELAY);
+
+  // If your STM32 MCU is little-endian (most common), you don't need to swap bytes.
+  // If it's big-endian, you may need to swap the bytes here.
+
+  return data;
+}
+
+
+uint16_t MPR121_Touched(void) {
+  // Read the 16-bit TOUCHSTATUS_L register value from the MPR121 device
+  uint16_t t;
+  t = MPR121_ReadRegister16(MPR121_TOUCHSTATUS_L);
+
+  // Extract the lower 12 bits that represent touch status
+  return t & 0x0FFF;
+}
+uint16_t MPR121_BaselineData(uint8_t t) {
+  if (t > 12)
+    return 0;
+
+  // Read the 8-bit baseline data for the specified electrode (t) from the MPR121 device
+  uint16_t bl;
+  bl = MPR121_ReadRegister8(MPR121_BASELINE_0 + t);
+
+  // Left shift the 8-bit value by 2 to convert it to a 10-bit value
+  return (bl << 2);
+}
+
+uint16_t MPR121_FilteredData(uint8_t t) {
+  if (t > 12)
+    return 0;
+
+  // Read the 16-bit filtered data for the specified electrode (t) from the MPR121 device
+  return MPR121_ReadRegister16(MPR121_FILTDATA_0L + t * 2);
+}
+
+void MPR121_SetThresholds(uint8_t touch, uint8_t release) {
+  // Set touch and release thresholds for all electrodes (0-11)
+  for (uint8_t i = 0; i < 12; i++) {
+    MPR121_WriteRegister(MPR121_TOUCHTH_0 + 2 * i, touch);
+    MPR121_WriteRegister(MPR121_RELEASETH_0 + 2 * i, release);
+  }
+}
+
+void MPR121_setThreshholds(uint8_t touch, uint8_t release) {
+	MPR121_SetThresholds(touch, release);
+}
+
+void MPR121_WriteRegister(uint8_t reg, uint8_t value) {
+  // MPR121 must be put in Stop Mode to write to most registers
+  bool stop_required = true;
+  uint8_t ecr_backup;
+  // first get the current set value of the MPR121_ECR register
+  HAL_I2C_Mem_Read(&hi2c1, MPR121_I2C_ADDRESS << 1, MPR121_ECR, I2C_MEMADD_SIZE_8BIT, &ecr_backup, 1, HAL_MAX_DELAY);
+  if ((reg == MPR121_ECR) || ((0x73 <= reg) && (reg <= 0x7A))) {
+      stop_required = 0; // false
+    }
+  if (stop_required) {
+    // Clear the register to set stop mode
+    uint8_t stop_mode = 0x00;
+    HAL_I2C_Mem_Write(&hi2c1, MPR121_I2C_ADDRESS << 1, MPR121_ECR, I2C_MEMADD_SIZE_8BIT, &stop_mode, 1, HAL_MAX_DELAY);
+  }
+  HAL_I2C_Mem_Write(&hi2c1, MPR121_I2C_ADDRESS << 1, reg, I2C_MEMADD_SIZE_8BIT, &value, 1, HAL_MAX_DELAY);
+
+   if (stop_required) {
+     // Write back the previous set ECR settings
+     HAL_I2C_Mem_Write(&hi2c1, MPR121_I2C_ADDRESS << 1, MPR121_ECR, I2C_MEMADD_SIZE_8BIT, &ecr_backup, 1, HAL_MAX_DELAY);
+   }
+}

@@ -1,0 +1,19 @@
+09:47:48 **** Incremental Build of configuration Debug for project motor ****
+make -j4 all 
+arm-none-eabi-gcc -o "motor.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\motor\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="motor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: motor.elf
+ 
+arm-none-eabi-size   motor.elf 
+arm-none-eabi-objdump -h -S  motor.elf  > "motor.list"
+arm-none-eabi-objcopy  -O ihex  motor.elf  "motor.hex"
+   text	   data	    bss	    dec	    hex	filename
+  50992	    484	   2412	  53888	   d280	motor.elf
+Finished building: default.size.stdout
+ 
+Finished building: motor.hex
+ 
+Finished building: motor.list
+ 
+
+09:47:51 Build Finished. 0 errors, 0 warnings. (took 2s.535ms)
+

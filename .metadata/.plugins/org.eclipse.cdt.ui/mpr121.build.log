@@ -1,0 +1,30 @@
+13:15:14 **** Incremental Build of configuration Debug for project mpr121 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:152:19: warning: passing argument 1 of 'sprintf' makes pointer from integer without a cast [-Wint-conversion]
+  152 |           sprintf(rec, "%X", kbd_get_touch());
+      |                   ^~~
+      |                   |
+      |                   int
+In file included from ../Core/Src/main.c:24:
+C:\ST\STM32CubeIDE_1.12.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:254:18: note: expected 'char * restrict' but argument is of type 'int'
+  254 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+arm-none-eabi-g++ -o "mpr121.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\user\Downloads\mpr121\mpr121\STM32H750VBTX_FLASH.ld" -Wl,-Map="mpr121.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: mpr121.elf
+ 
+arm-none-eabi-size   mpr121.elf 
+arm-none-eabi-objdump -h -S  mpr121.elf  > "mpr121.list"
+arm-none-eabi-objcopy  -O ihex  mpr121.elf  "mpr121.hex"
+   text	   data	    bss	    dec	    hex	filename
+  31372	    108	   2284	  33764	   83e4	mpr121.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpr121.hex
+ 
+Finished building: mpr121.list
+ 
+
+13:15:19 Build Finished. 0 errors, 1 warnings. (took 5s.129ms)
+

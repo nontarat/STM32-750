@@ -1,0 +1,30 @@
+09:11:50 **** Incremental Build of configuration Debug for project test_board ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H723xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:126:37: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  126 |           HAL_UART_Transmit(&huart3,"hello", 10, 1000);
+      |                                     ^~~~~~~
+      |                                     |
+      |                                     char *
+In file included from ../Core/Inc/stm32h7xx_hal_conf.h:463,
+                 from ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:1637:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1637 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "test_board.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\STM32\test_board\STM32H723ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="test_board.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: test_board.elf
+ 
+arm-none-eabi-size  test_board.elf 
+arm-none-eabi-objdump -h -S test_board.elf  > "test_board.list"
+   text	   data	    bss	    dec	    hex	filename
+  24088	    216	   1960	  26264	   6698	test_board.elf
+Finished building: default.size.stdout
+ 
+Finished building: test_board.list
+ 
+
+09:11:51 Build Finished. 0 errors, 1 warnings. (took 879ms)
+

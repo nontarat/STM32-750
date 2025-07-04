@@ -1,0 +1,22 @@
+/*
+ * InlineCurrentSense.hpp
+ *
+ *  Created on: Oct 12, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_
+#define SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_
+
+#include "../common/foc_utils.h"
+#include "../common/time_utils.h"
+#include "../common/base_classes/CurrentSense.hpp"
+#include "hardware_api.h"
+
+class InlineCurrentSense {
+public:
+	InlineCurrentSense();
+	virtual ~InlineCurrentSense();
+};
+
+#endif /* SRC_CURRENT_SENSE_INLINECURRENTSENSE_HPP_ */

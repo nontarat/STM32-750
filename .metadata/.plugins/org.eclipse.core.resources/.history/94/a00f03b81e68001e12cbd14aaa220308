@@ -1,0 +1,13 @@
+/*
+ * hardware_api.h
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: user
+ */
+
+#ifndef SRC_CURRENT_SENSE_HARDWARE_API_H_
+#define SRC_CURRENT_SENSE_HARDWARE_API_H_
+
+
+
+#endif /* SRC_CURRENT_SENSE_HARDWARE_API_H_ */

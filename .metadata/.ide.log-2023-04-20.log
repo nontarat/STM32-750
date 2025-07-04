@@ -1,0 +1,21 @@
+2023-04-20 13:56:19,417 [INFO] MainUpdater:2854 - connection check result : 10
+2023-04-20 13:56:19,561 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-04-20 13:56:19,565 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-04-20 13:56:19,566 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-04-20 13:56:20,506 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-04-20 13:56:20,506 [INFO] DetailPanel:341 - Set advertising image to C:/Users/user/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-04-20 13:56:30,800 [INFO] MetaSearchPanel:254 - search for filter with key=I2C
+2023-04-20 13:56:30,802 [INFO] MetaSearchPanel:355 - search for filter component I2C
+2023-04-20 13:56:30,802 [INFO] MetaSearchPanel:329 - Collapse all filters sections
+2023-04-20 13:56:56,615 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-04-20 13:56:56,977 [INFO] ApiDb:448 - Save user favorites file C:\Users\user/.stm32cubeide/favorites.mcus.txt: 2 item(s)
+2023-04-20 13:56:56,977 [INFO] ApiDb:452 - User favorites MCUs=[STM32F103C8T6, STM32H750VBT6]
+2023-04-20 15:17:12,994 [INFO] MainUpdater:2854 - connection check result : 10
+2023-04-20 15:17:13,066 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-04-20 15:17:13,067 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2023-04-20 15:17:13,069 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2023-04-20 15:17:13,602 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2023-04-20 15:17:13,602 [INFO] DetailPanel:341 - Set advertising image to C:/Users/user/STM32Cube/Repository/\en.prom-stm32h5-mcu-finder.jpg
+2023-04-20 15:17:21,002 [INFO] McuFinderGlobals:66 - Set McuFinderConnectedMode to true
+2023-04-20 15:17:21,271 [INFO] ApiDb:448 - Save user favorites file C:\Users\user/.stm32cubeide/favorites.mcus.txt: 2 item(s)
+2023-04-20 15:17:21,271 [INFO] ApiDb:452 - User favorites MCUs=[STM32F103C8T6, STM32H750VBT6]

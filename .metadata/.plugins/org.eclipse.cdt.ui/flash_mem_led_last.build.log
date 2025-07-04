@@ -1,0 +1,10 @@
+08:57:56 **** Build of configuration Debug for project flash_mem_led_last ****
+make -j4 all 
+arm-none-eabi-size  flash_mem_led_last.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6116	      0	   1600	   7716	   1e24	flash_mem_led_last.elf
+Finished building: default.size.stdout
+ 
+
+08:57:56 Build Finished. 0 errors, 0 warnings. (took 528ms)
+

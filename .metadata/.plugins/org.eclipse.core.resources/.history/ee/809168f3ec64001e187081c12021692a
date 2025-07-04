@@ -1,0 +1,13 @@
+/*
+ * MagneticSensorSPI.h
+ *
+ *  Created on: Oct 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_MAGNETICSENSORSPI_H_
+#define INC_MAGNETICSENSORSPI_H_
+
+
+
+#endif /* INC_MAGNETICSENSORSPI_H_ */

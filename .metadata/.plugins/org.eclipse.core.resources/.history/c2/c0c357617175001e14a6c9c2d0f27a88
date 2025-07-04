@@ -1,0 +1,17 @@
+/*
+ * InlineCurrentSense.h
+ *
+ *  Created on: Oct 28, 2023
+ *      Author: user
+ */
+
+#ifndef CURRENT_SENSE_INLINECURRENTSENSE_H_
+#define CURRENT_SENSE_INLINECURRENTSENSE_H_
+
+class InlineCurrentSense : public CurrentSense {
+public:
+	InlineCurrentSense();
+	virtual ~InlineCurrentSense();
+};
+
+#endif /* CURRENT_SENSE_INLINECURRENTSENSE_H_ */

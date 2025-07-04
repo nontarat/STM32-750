@@ -1,0 +1,10 @@
+08:50:20 **** Incremental Build of configuration Debug for project key1 ****
+make -j4 all 
+arm-none-eabi-size   key1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25108	     40	   1856	  27004	   697c	key1.elf
+Finished building: default.size.stdout
+ 
+
+08:50:21 Build Finished. 0 errors, 0 warnings. (took 317ms)
+

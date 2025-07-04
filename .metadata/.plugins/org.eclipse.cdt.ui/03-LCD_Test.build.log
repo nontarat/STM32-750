@@ -1,0 +1,10 @@
+09:56:50 **** Build of configuration Debug for project 03-LCD_Test ****
+make -j4 all 
+arm-none-eabi-size   03-LCD_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  17800	     24	   1816	  19640	   4cb8	03-LCD_Test.elf
+Finished building: default.size.stdout
+ 
+
+09:56:50 Build Finished. 0 errors, 0 warnings. (took 528ms)
+

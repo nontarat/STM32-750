@@ -1,0 +1,37 @@
+/*
+ * sPWM.h
+ *
+ *  Created on: Nov 7, 2023
+ *      Author: user
+ */
+
+#ifndef INC_SPWM_H_
+#define INC_SPWM_H_
+
+typedef enum
+{
+	_30Khz  =  30000,
+	_50KHz  =  50000,
+	_100KHz = 100000
+}eFreq_Type;
+
+typedef enum
+{
+	OFF = 0,
+	 ON = 1,
+
+}eSwitch_Type;
+
+typedef struct
+{
+	uint32_t Prescaler;
+	uint32_t Period;
+	uint32_t Pulse;
+}Freq_HandleTypeDef;
+uint32_t const FCPU = 64000000;
+uint16_t const MAX16BIT = 65535;
+
+void VFD_Signal(eSwitch_Type _status);
+
+
+#endif /* INC_SPWM_H_ */

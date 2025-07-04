@@ -1,0 +1,10 @@
+09:53:10 **** Build of configuration Debug for project mini_str ****
+make -j4 all 
+arm-none-eabi-size   mini_str.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28704	    144	   1904	  30752	   7820	mini_str.elf
+Finished building: default.size.stdout
+ 
+
+09:53:11 Build Finished. 0 errors, 0 warnings. (took 520ms)
+
